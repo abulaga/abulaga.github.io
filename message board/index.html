@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .current_time{
+            margin: 20px;
+
+        }
+        .cards {
+            margin: auto;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .container {
+            flex: 0 0 33%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            margin: 10px 0;
+            padding: 19px;
+            width: 300px;
+            border: black 1px solid;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px #aaa;
+            /* background-color: #ddd; */
+            background-image: linear-gradient(35deg, #ddd, #aaa);
+            /* background-image: linear-gradient(left, rgba(#E80C7A,.5) 20%, transparent 50%) */
+            /* background-image(linear-gradient(left, rgba(#E80C7A,.5) 20%, transparent 50%)); */
+            /* boxShadow =10px 20px 30px blue */
+        }
+
+        .pic {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            padding-left: 10px;
+        }
+
+        p {
+            padding-left: 100px;
+        }
+
+        @media screen and (max-width: 1060px) {
+            .container {
+                flex: 0 0 50%;
+            }
+        }
+        @media screen and (max-width: 679px) {
+            .container {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="current_time"></h1>
+    <div class="cards">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-2839AEB1-9EED-43C5-B5D9-E6DCF23DB186')
+            .then((response) => {
+                // 這裡會得到一個 ReadableStream 的物件
+                // console.log(response);
+                // 可以透過 blob(), json(), text() 轉成可用的資訊
+                return response.json();
+            }).then((jsonData) => {
+                var locations = jsonData.records.location
+
+
+                locations.forEach(element => {
+                    var location = element.locationName
+                    //天氣現象
+                    var Wx = element.weatherElement[0].time[0].parameter.parameterName
+                    var Wx_value = Number(element.weatherElement[0].time[0].parameter.parameterValue)
+                    // 最低溫度
+                    var MinT = element.weatherElement[2].time[0].parameter.parameterName
+                    // 舒適度
+                    var CI = element.weatherElement[3].time[0].parameter.parameterName
+                    // 最高溫度
+                    var MaxT = element.weatherElement[4].time[0].parameter.parameterName
+                    // console.log(typeof(Number(Wx_value)))
+
+                    //設定圖片
+                    var pic_url = ''
+                    if (Wx_value == 1) {
+                        pic_url = './img/sunny.png'
+                    } else if(Wx_value == 2){
+                        pic_url = './img/code2.png'
+                    } else if(Wx_value >= 3 && Wx_value <= 6){
+                        pic_url = './img/cloud.png'
+                    } else {
+                        pic_url = './img/raining.png'
+                    }
+
+
+                    document.querySelector('.cards').innerHTML += `
+                    <div class="container">
+                        <div class="card">
+                            <div class="pic"
+                                style="background-image: url(${pic_url});">
+                                <img src="" alt="">
+                            </div>
+                            <div class="detail">
+                                <h1 class="place">${location}</h1>
+                                <h2>天氣概況</h2>
+                                <p class="weather">${Wx}</p>
+                                <h2>最高溫度</h2>
+                                <p class="temperature_H">${MaxT}°C</p>
+                                <h2>最低溫度</h2>
+                                <p class="temperature_L">${MinT}°C</p>
+                                <h2>天氣敘述</h2>
+                                <p class="description">${CI}</p>
+                            </div>
+                        </div>
+                    </div>`
+                });
+                // document.querySelector('.cards').innerHTML += <div class="card"><>
+            }).catch((err) => {
+                console.log('錯誤:', err);
+            });
+        // console.log(screen)
+        function getTime() {
+            var date = new Date()
+            document.querySelector(".current_time").innerHTML = '現在時間:' +
+                date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日 ' +
+                date.getHours() + '時' + date.getMinutes() + '分' + date.getSeconds() + '秒'
+        }
+        window.setInterval(getTime, 1000)
+            // getTime()
+    </script>
+</body>
+
+</html>
