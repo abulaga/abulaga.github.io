@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">    
+    <link rel="stylesheet" href="css/page2.css" media="screen" type="text/css">
+</head>
+<body>
+    <nav class="full">
+        <!-- 漢堡條 -->
+        <div class="ham_bar">
+            <div class="bar_line line1"></div>
+            <div class="bar_line line2"></div>
+            <div class="bar_line line3"></div>
+        </div>
+        <h1>Mountain town Ramble</h1>
+        <ul>
+            <li>首 頁</li>
+            <li>慢 遊</li>
+            <li>慢 活</li>
+            <li>慢 食</li>
+        </ul>
+        <i class="fas fa-angle-right nav_back"></i>
+    </nav>
+
+    <script>
+        (function(){
+            window.setTimeout(function(){
+                document.querySelector('nav').classList.remove('full')
+            },0)
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>山城漫遊</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="css/bookstyle.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css"/> -->
+</head>
+
+<body>
+    <nav class="nav ">
+        <!-- 漢堡條 -->
+        <div class="ham_bar ">
+            <div class="bar_line line1"></div>
+            <div class="bar_line line2"></div>
+            <div class="bar_line line3"></div>
+        </div>
+        <h1>Mountain town Ramble</h1>
+        <ul>
+            <li>首 &nbsp;頁</li>
+            <li>慢 &nbsp;遊</li>
+            <li>慢 &nbsp;活</li>
+            <li>慢 &nbsp;食</li>
+        </ul>
+        <div class="nav_pic"></div>
+        <i class="fas fa-angle-right nav_back"></i>
+    </nav>
+    <nav class="phone_nav">
+        <div class="phone_ham_bar">
+            <div class="phone_bar_line line1 "></div>
+            <div class="phone_bar_line line2 "></div>
+            <div class="phone_bar_line line3 "></div>
+        </div>
+        <div class="phone_list hide">
+            <ul>
+                <li>首 &nbsp;頁<span>Mountain town Ramble Read All</span></li>
+                <li>慢 &nbsp;遊<span>Mountain town Ramble Read All</span></li>
+                <li>慢 &nbsp;活<span>Mountain town Ramble Read All</span></li>
+                <li>慢 &nbsp;食<span>Mountain town Ramble Read All</span></li>
+            </ul>
+            <div class="phone_nav_pic"></div>
+        </div>
+    </nav>
+    <!-- 首頁 -->
+    <div class="home">
+        <!-- <button id="btn_perv">上一頁</button> -->
+        <div class="container">
+            <!-- 左半部區域 -->
+            <div class="left_block">
+
+            </div>
+            <!-- 書 -->
+            <div class="bookspace begin">
+                <!-- 書本本體 -->
+                <figure class='book'>
+
+                    <!-- 精裝書首頁 -->
+                    <ul class='hardcover_front '>
+                        <li>
+                            <div class="coverDesign blue">
+                                <h1>CSS</h1>
+                                <p>BOOK</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="back"></div>
+                        </li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                        <li id="page5" data-page="5">
+                            <div class="back">page5back</div>
+                            <div class="front">page5front</div>
+                        </li>
+                        <li id="page4" data-page="4">
+                            <div class="back">page4back</div>
+                            <div class="front">page4front</div>
+                        </li>
+                        <li id="page3" data-page="3">
+                            <div class="back">page3back</div>
+                            <div class="front">page3front</div>
+                        </li>
+                        <li id="page2" data-page="2">
+                            <div class="back">page2back</div>
+                            <div class="front">page2front</div>
+                        </li>
+                        <li id="page1" data-page="1" class="">
+                            <div class="back">page1back</div>
+                            <div class="front">page1front</div>
+                        </li>
+                    </ul>
+
+                    <!-- 尾頁 -->
+
+                    <ul class='hardcover_back'>
+                        <li></li>
+                        <li>
+                            <div class="front"></div>
+                        </li>
+                    </ul>
+                    <!-- 書脊柱 -->
+                    <ul class='book_spine'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                </figure>
+
+            </div>
+            <!-- 文字內容空間 -->
+            <div class="text_block text_block_first" id="text_block_first">
+                <div class="title_block">
+                    <div class="center">
+                        <h1 class="title">Mountain town Ramble1</h1>
+                        <h2 class="undertitle">慢食 ● 慢活 ● 漫遊</h2>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="text_block hide" id="text_block1">
+                <div class="title_block">
+                    <h1 class="title">“Mountain town Ramble11</h1>
+                    <h2 class="undertitle">慢食 ● 慢活 ● 漫遊</h2>
+                </div>
+                <p class="">由來由來由來由來由來由來由來由來由來由來由來由來由來由來
+                </p>
+                <div class="btn_area">
+                    <div class="btn_block">
+                    </div>
+                </div>
+            </div>
+            <div class="text_block hide" id="text_block2">
+                <div class="title_block">
+                    <h1 class="title">“Mountain town Ramble22222</h1>
+                    <h2 class="undertitle">漫遊</h2>
+                </div>
+                <p class="">
+                    名葫蘆墩的豐原，是台中縣市合併前的縣治所在，也是台中山線地區的重鎮。兩百多年前，來此拓墾的漢人開鑿葫蘆墩圳為良田灌溉，讓這裡變成富庶豐饒之地，而有「富春鄉」、「小蘇州」之美譽。隨著都市發展，葫蘆墩圳流經市區的部分因加蓋而隱沒，如今為了營造豐原成為「水岸花都」，未來這條都市藍帶可望重新貼近豐原人的生活。且讓我們沿著圳水漫步葫蘆墩，從另一個角度探索豐原。
+                </p>
+                <div class="btn_area">
+                    <div class="btn_block">
+                    </div>
+                </div>
+            </div>
+            <div class="text_block hide" id="text_block3">
+                <div class="title_block">
+                    <h1 class="title">“Mountain town Ramble333</h1>
+                    <h2 class="undertitle">慢活</h2>
+                </div>
+                <p class="">
+                    名葫蘆墩的豐原，是台中縣市合併前的縣治所在，也是台中山線地區的重鎮。兩百多年前，來此拓墾的漢人開鑿葫蘆墩圳為良田灌溉，讓這裡變成富庶豐饒之地，而有「富春鄉」、「小蘇州」之美譽。隨著都市發展，葫蘆墩圳流經市區的部分因加蓋而隱沒，如今為了營造豐原成為「水岸花都」，未來這條都市藍帶可望重新貼近豐原人的生活。且讓我們沿著圳水漫步葫蘆墩，從另一個角度探索豐原。
+                </p>
+                <div class="btn_area">
+                    <div class="btn_block">
+                    </div>
+                </div>
+            </div>
+            <div class="text_block hide" id="text_block4">
+                <div class="title_block">
+                    <h1 class="title">“Mountain town Ramble444</h1>
+                    <h2 class="undertitle">慢食</h2>
+                </div>
+                <p class="">
+                    名葫蘆墩的豐原，是台中縣市合併前的縣治所在，也是台中山線地區的重鎮。兩百多年前，來此拓墾的漢人開鑿葫蘆墩圳為良田灌溉，讓這裡變成富庶豐饒之地，而有「富春鄉」、「小蘇州」之美譽。隨著都市發展，葫蘆墩圳流經市區的部分因加蓋而隱沒，如今為了營造豐原成為「水岸花都」，未來這條都市藍帶可望重新貼近豐原人的生活。且讓我們沿著圳水漫步葫蘆墩，從另一個角度探索豐原。
+                </p>
+                <div class="btn_area">
+                    <div class="btn_block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button id="btn_next">下一頁</button> -->
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/home.js"></script>
+    <!-- <script>
+        (function () {
+            // 按鈕事件
+            var current_page = 0;
+            $('#btn_next').click(function () {
+                switch (current_page) {
+                    case 0:
+                        $('.hardcover_front').addClass('turn');
+                        current_page++;
+                        break;
+                    case 1:
+                        $('#page1').addClass('turn')
+                        current_page++;
+                        break;
+                    case 2:
+                        $('#page2').addClass('turn')
+                        current_page++;
+                        break;
+                    case 3:
+                        $('#page3').addClass('turn')
+                        current_page++;
+                        break;
+                    case 4:
+                        $('#page4').addClass('turn')
+                        current_page++;
+                        break;
+                    case 5:
+                        $('#page5').addClass('turn')
+                        current_page++;
+                        break;
+                }
+
+            })
+            $('#btn_perv').click(function () {
+                switch (current_page) {
+                    case 1:
+                        $('.hardcover_front').removeClass('turn');
+                        current_page--;
+                        break;
+                    case 2:
+                        $('#page1').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 3:
+                        $('#page2').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 4:
+                        $('#page3').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 5:
+                        $('#page4').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 6:
+                        $('#page5').removeClass('turn')
+                        current_page--;
+                        break;
+                }
+            })
+
+            
+            window.setTimeout((begin_event),1000)
+
+            function begin_event(){
+                $('.bookspace').removeClass('begin')
+                $('.text_block').removeClass('begin')
+                $('.text_block > p').removeClass('begin')
+                $('.hardcover_front').addClass('turn');
+                current_page++;
+            }
+            
+
+            $('.page >li').click(page_click) 
+            function page_click(){
+                // console.log(this)
+                // console.log(this.classlist)
+                // if (current_page == this.dataset.page){
+                //     this.classlist.add('turn')
+                // }else{
+                //     this.classlist.remove('turn')
+                // }
+            }    
+
+            // var test = document.getElementById('btn_next')
+            
+            // console.log(test.classlist)
+
+            
+            // const pages = Array.from(document.querySelectorAll('.page >li'))
+            // var page_change_end= true;
+
+            // pages.forEach(element => {
+            //     element.addEventListener('click',pages_click)
+            //     element.addEventListener('transitionend',function(){
+            //         page_change_end = true
+            //     })
+            // });
+            // function pages_click(){
+            //     console.log(current_page)
+            //     console.log(this.dataset.page)
+            //     console.log("----------------------")
+            //     if (page_change_end){
+            //         if (this.dataset.page == current_page ){
+            //         pages[pages.indexOf(this)].classList.add('turn')
+            //         page_change_end = false
+            //         current_page++                    
+            //     }else{
+            //         pages[pages.indexOf(this)].classList.remove('turn')
+            //         page_change_end = false
+            //         current_page--
+            //     }
+            //     console.log(current_page)
+            //     }               
+            // }
+            
+            // **************下一頁***************
+            document.querySelector('.hardcover_back').addEventListener('click',function(){                
+                switch (current_page) {
+                    case 0:
+                        $('.hardcover_front').addClass('turn');
+                        current_page++;
+                        break;
+                    case 1:
+                        $('#page1').addClass('turn')
+                        current_page++;
+                        break;
+                    case 2:
+                        $('#page2').addClass('turn')
+                        current_page++;
+                        break;
+                    case 3:
+                        $('#page3').addClass('turn')
+                        current_page++;
+                        break;
+                    case 4:
+                        $('#page4').addClass('turn')
+                        current_page++;
+                        break;
+                    case 5:
+                        $('#page5').addClass('turn')
+                        current_page++;
+                        break;
+                }        
+            })
+            // **************上一頁***************
+            document.querySelector('.hardcover_front').addEventListener('click',function(){
+                switch (current_page) {
+                    case 1:
+                        $('.hardcover_front').removeClass('turn');
+                        current_page--;
+                        break;
+                    case 2:
+                        $('#page1').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 3:
+                        $('#page2').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 4:
+                        $('#page3').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 5:
+                        $('#page4').removeClass('turn')
+                        current_page--;
+                        break;
+                    case 6:
+                        $('#page5').removeClass('turn')
+                        current_page--;
+                        break;
+                } 
+            })
+        
+            document.querySelector('.ham_bar').addEventListener('click',function(){
+                document.querySelector('nav').classList.add('open')
+                document.querySelector('.ham_bar').classList.add('hide')  
+                document.querySelector('.nav_back').classList.add('show')               
+            })
+
+            document.querySelector('.nav_back').addEventListener('click',function(){
+                document.querySelector('nav').classList.remove('open')
+                document.querySelector('.ham_bar').classList.remove('hide')  
+                document.querySelector('.nav_back').classList.remove('show')               
+            })
+            
+        })()
+    </script> -->
+
+</body>
+
+</html>
