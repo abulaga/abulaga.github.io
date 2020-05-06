@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://www.oxxostudio.tw/demo/201503/css-clip-path-demo11.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+  <meta name="author" content="oxxo.studio">
+  <meta name="copyright" content="oxxo.studio">
+	<title>運用 clip-path 的純 CSS 形狀變換 demo11</title>
+	<style>
+		.s{
+		  position:absolute;
+		  top:0;
+		  left:80px;
+		  width:100px;
+		  height:100px;
+		  -webkit-animation:s 2s infinite alternate;
+		}
+		.s div{
+		  position:absolute;
+		  top:0;
+		  left:0;
+		  width:100%;
+		  height:100%;
+		}
+		.a{
+		  background:#c00;
+		  -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
+		  -webkit-animation:a 2s infinite alternate;
+		}
+		.b{
+		  background:#c00;
+		  -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+		  -webkit-animation:b 2s infinite alternate;
+		}
+		.c{
+		  background:#c00;
+		  -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+		  -webkit-animation:c 2s infinite alternate;
+		}
+		.d{
+		  background:#c00;
+		  -webkit-clip-path: polygon(100% 100%, 0% 100%, 50% 50%);
+		  -webkit-animation:d 2s infinite alternate;
+		}
+
+
+
+		@-webkit-keyframes a{
+		  0%,10%{
+		    background:#c00;
+		    -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
+		  }
+		  90%,100%{
+		    background:#069;
+		    -webkit-clip-path: polygon(0% 100%, 25% 100%, 12.5% 0%);
+		  }
+		}
+		@-webkit-keyframes b{
+		  0%,10%{
+		    background:#c00;
+		    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+		  }
+		  90%,100%{
+		    background:#095;
+		    -webkit-clip-path: polygon(25% 0%, 50%  0%,37.5% 100%);
+		  }
+		}
+		@-webkit-keyframes c{
+		  0%,10%{
+		    background:#c00;
+		    -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+		  }
+		  90%,100%{
+		    background:#f80;
+		    -webkit-clip-path: polygon(62.5% 0%,75% 100%,50% 100%);
+		  }
+		}
+		@-webkit-keyframes d{
+		  0%,10%{
+		    background:#c00;
+		    -webkit-clip-path: polygon(100% 100%, 0% 100%, 50% 50%);
+		  }
+		  90%,100%{
+		    background:#f69;
+		    -webkit-clip-path: polygon(100% 0%,87.5% 100%, 75% 0%);
+		  }
+		}
+		@-webkit-keyframes s{
+		  0%,10%{
+		    top:20px;
+		    left:100px;
+		    width:100px;
+		    height:100px;
+		  }
+		  90%,100%{
+		    top:40px;
+		    left:20px;
+		    width:250px;
+		    height:60px;
+		  }
+		}
+	</style>
+<script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/util.js"></script><script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/pagejs.js"></script></head>
+<body>
+  <div class="s">
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+  </div>
+
+  <style>
+  #info {
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    left: 0px;
+    background: #222;
+    padding: 20px 30px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0 0 10px;
+    border-radius: 0 5px 5px 0;
+		font-size:16px;
+  }
+  
+  #info a {
+    color: #0bf;
+    transition: .2s;
+  }
+  
+  #info a:hover {
+    color: #6df;
+  }
+  </style>
+  <div id="info">相關參考：<a id="infoLink" href="https://www.oxxostudio.tw/articles/201503/css-clip-path.html" target="_blank">運用 clip-path 的純 CSS 形狀變換 </a></div>
+  <script>
+  var href = location.href;
+  var page = href.split("demo/");
+  var name = page[1].split("-demo")[0];
+  var title = document.querySelector('title').innerHTML;
+  document.getElementById('infoLink').setAttribute('href', '/articles/' + name + '.html');
+  document.getElementById('infoLink').innerHTML = title.split("demo")[0];
+  </script>
+
+<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div></body><umsdataelement id="UMSSendDataEventElement" data="https://www.oxxostudio.tw/articles/201503/css-clip-path.html" docguid="null"></umsdataelement></html>
