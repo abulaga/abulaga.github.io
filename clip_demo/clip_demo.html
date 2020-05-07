@@ -9,7 +9,7 @@
     body {
         position: relative;
     }        
-        .sencer {
+        .sensor {
             position: absolute;
             top: 0;
             left: 0;
@@ -21,11 +21,11 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background-color: rgba(100, 100, 100, 0.8);
+            background-color: rgba(255, 255, 255, 0.33);
             border-radius: 50%;
             top: 50%;
-            left: 50%;            
-            transform: translate(-50%,-50%);
+            left: 50%;           
+            transform: translate(-50%,-50%); 
         }
         .pic {
             position: absolute;
@@ -65,20 +65,20 @@
         }
 
         .pic.change1_2 {
-            -webkit-animation: change1_2 2s forwards;
+            animation: change1_2 2s forwards;
           
         }
         
         .pic.change2_3 {
-            -webkit-animation: change2_3 2s forwards;
+            animation: change2_3 2s forwards;
           
         }
         
         .pic.change3_1 {
-            -webkit-animation: change3_1 2s forwards;
+            animation: change3_1 2s forwards;
           
         }
-        @-webkit-keyframes change1_2 {
+        @keyframes change1_2 {
             from {
                 clip-path: polygon(0% 0%,
                         0% 0%,
@@ -132,61 +132,15 @@
                         0% 80%);
             }
         }
-        @-webkit-keyframes change2_3 {
+        @keyframes change2_3 {
             from {
-                clip-path: polygon(0% 0%,
-                        66% 0%,
-                        100% 0%,
-                        100% 20%,
-                        66% 20%,
-                        66% 0%,
-                        0% 0%,
-
-                        0% 40%,
-                        0% 40%,
-                        66% 40%,
-                        66% 60%,
-                        0% 60%,
-                        0% 40%,
-                        0% 40%,
-
-
-                        0% 80%,
-                        33% 80%,
-                        66% 80%,
-                        66% 100%,
-                        33% 100%,
-                        33% 80%,
-                        0% 80%);
+                clip-path: polygon(0% 0%,66% 0%,100% 0%,100% 20%,66% 20%,66% 0%,0% 0%,0% 40%,0% 40%,66% 40%,66% 60%,0% 60%,0% 40%,0% 40%,0% 80%,33% 80%,66% 80%,66% 100%,33% 100%,33% 80%,0% 80%);
             }
             to {
-                clip-path: polygon(0% 0%,
-                        33% 0%,
-                        66% 0%,
-                        66% 20%,
-                        33% 20%,
-                        33% 0%,
-                        0% 0%,
-
-                        0% 40%,
-                        33% 40%,
-                        100% 40%,
-                        100% 60%,
-                        33% 60%,
-                        33% 40%,
-                        0% 40%,
-
-
-                        0% 80%,
-                        0% 80%,
-                        66% 80%,
-                        66% 100%,
-                        0% 100%,
-                        0% 80%,
-                        0% 80%);
+                clip-path: polygon(0% 0%,33% 0%,66% 0%,66% 20%,33% 20%,33% 0%,0% 0%,0% 40%,33% 40%,100% 40%,100% 60%,33% 60%,33% 40%,0% 40%,0% 80%,0% 80%,66% 80%,66% 100%,0% 100%,0% 80%,0% 80%);
             }
         }
-        @-webkit-keyframes change3_1 {
+        @keyframes change3_1 {
             from {
                 clip-path: polygon(0% 0%,
                         33% 0%,
@@ -203,7 +157,6 @@
                         33% 60%,
                         33% 40%,
                         0% 40%,
-
 
                         0% 80%,
                         0% 80%,
@@ -229,7 +182,6 @@
                         66% 60%,
                         66% 40%,
                         0% 40%,
-
 
                         0% 80%,
                         0% 80%,
@@ -248,15 +200,13 @@
         <div class="circle">
         </div>
     </div>
-    <div class="sencer"></div>
+    <div class="sensor"></div>
 
 
     <script>
         (function () {
 
-            window.addEventListener('click', function () {
-                
-                console.log(document.querySelector('.pic').classList)
+            window.addEventListener('click', function () {                
                 if (document.querySelector('.pic').classList.contains('change1_2')) {
                     document.querySelector('.pic').classList.remove('change1_2')
                     document.querySelector('.pic').classList.add('change2_3')
@@ -271,17 +221,41 @@
                 }
             })
 
-            let x,y
-            document.querySelector('.sencer').addEventListener('mousemove',function(e){
-                [x,y] = [e.offsetX,e.offsetY]
-                console.log([x,y])
+            let mousse_in = false
+            let sensor = document.querySelector('.sensor')
+            let mask = document.querySelector('.circle')
+            
+            let orgin_x = mask.offsetLeft;
+            let orgin_y = mask.offsetTop;
 
-                let dx = document.querySelector('.circle').offsetLeft;
-                let dy = document.querySelector('.circle').offsetTop;
+            sensor.addEventListener('mousemove',function(e){
+                mousse_in = true
+                let [x,y] = [e.offsetX,e.offsetY]
+                // console.log([x,y])
 
-                // document.querySelector('.circle').style.left = x "px";
-                // document.querySelector('.circle').style.top = y "px";
-                console.log(document.querySelector('.circle').style)
+                // mask.style.left=x + "px"
+                // mask.style.top=y + "px"
+
+                
+                mask.style.left= orgin_x + (x-300)*0.2 + "px"
+                mask.style.top=orgin_y + (y-300)*0.2 + "px"
+
+
+                
+                // mask.offsetX = x
+
+
+
+
+                // document.querySelector('.circle').style.left = x +"px";
+                // document.querySelector('.circle').style.top = y +"px";
+                // console.log(document.querySelector('.circle'))
+            })
+
+            sensor.addEventListener('mouseout',function(e){
+                mousse_in = false
+                x = 0
+                y = 0
             })
 
             
