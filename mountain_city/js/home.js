@@ -168,11 +168,13 @@
         document.querySelector('.nav_back').classList.remove('show')               
     })
 
-    document.querySelectorAll('nav ul li').forEach(element =>{
+    document.querySelectorAll('.nav ul li').forEach(element =>{
         element.addEventListener('click',function(){
-            document.querySelector('nav').classList.add('full')
-            document.querySelector('nav').addEventListener('transitionend',function(e){
+            document.querySelector('.nav').classList.add('full')
+           
+            document.querySelector('.nav').addEventListener('transitionend',function(e){
                 // width動畫結束才跳頁
+                console.log(e)
                 if (e.propertyName === 'width'){
                     document.location.href="./page2.html"
                 }
@@ -183,12 +185,25 @@
     //手機板NAV
     document.querySelector('.phone_ham_bar').addEventListener('click',function(){
         if($('.phone_list').hasClass("hide")){
-            document.querySelector('.phone_list').classList.remove('hide')
+            document.querySelector('.phone_list').classList.remove('hide') 
             $('.phone_bar_line').addClass('close')
         }else{
             document.querySelector('.phone_list').classList.add('hide')
             $('.phone_bar_line').removeClass('close')
         }        
+    })
+    document.querySelectorAll('.phone_nav ul li').forEach(element =>{
+        element.addEventListener('click',function(){
+            document.querySelector('.phone_list').classList.add('full')
+            document.querySelector('.phone_list').addEventListener('transitionend',function(e){
+                // width動畫結束才跳頁
+                console.log(e)
+                // if (e.propertyName === 'width'){
+                //     document.location.href="./page2.html"
+                // }
+            })
+        })
+
     })
     
 })()

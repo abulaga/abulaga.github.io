@@ -2,7 +2,7 @@
 
 body {
     width: 100vw;
-    overflow: hidden;     
+    overflow: hidden;
 }
 .home {
     width: 100vw;
@@ -23,14 +23,14 @@ body {
     position: absolute;
     width: 62px;
     height: 100%;
-    // background-color: $bk_nav;
-    background-image: url('../img/background.png');
+    background-color: $bk_nav;
+    background-image: url("../img/background.png");
     background-size: cover;
     background-position: left;
     right: 0;
     z-index: 10;
-    transition-duration: 1s ;
-    transition-timing-function: cubic-bezier(.35,-0.2,.63,1.3);
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.35, -0.2, 0.63, 1.3);
     overflow: hidden;
 
     &.open {
@@ -40,17 +40,20 @@ body {
         right: 0;
         z-index: 100;
 
-        @media (max-width:768px) {
-            width: 100%;            
+        @media (max-width: 768px) {
+            width: 100%;
         }
     }
 
     &.full {
-        transition-timing-function: cubic-bezier(.36,-0.25,.46,.98);
-        width: 100%;
+        transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
+        width: 105%;
 
-        .nav_pic{
+        .nav_pic {
             display: block;
+        }
+        @media (max-width: 768px) {
+            // transition-duration: 0.5s;
         }
     }
 
@@ -60,8 +63,8 @@ body {
         top: 50%;
         transform: translateY(-50%);
 
-        li::before{
-            content: '';
+        li::before {
+            content: "";
             position: absolute;
             top: 0;
             bottom: 0;
@@ -72,16 +75,16 @@ body {
             transition-duration: 0.6s;
         }
 
-        li{
+        li {
             width: 100px;
             font-size: 40px;
-            line-height: 100px;            
+            line-height: 100px;
             color: #fff;
             position: relative;
 
-            &::after{
-                content: 'Mountain town Ramble Read All';
-                position: absolute;            
+            &::after {
+                content: "Mountain town Ramble Read All";
+                position: absolute;
                 font-size: 14px;
                 top: 0;
                 bottom: 0;
@@ -90,32 +93,36 @@ body {
             }
 
             &:hover {
-                color:$text_color_nav_hover;
+                color: $text_color_nav_hover;
 
-                &::after{
-                    color:$text_color_nav;
+                &::after {
+                    color: $text_color_nav;
                 }
             }
-
-            
         }
 
-        :hover::before{    
+        :hover::before {
             left: 0%;
-            right: 0%;  
+            right: 0%;
         }
     }
 
     .nav_pic {
         position: absolute;
-        width: 290px;
-        height: 350px;
-        background-image: url(../img/山城慢游-16.jpg);
-        background-size: cover;
+        width: 252px;
+        height: 354px;
+        background-image: url(../img/LOGO.png);
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
         left: 70vw;
         top: 52px;
-        display: none;       
+        display: none;
+
+        @media (max-width: 768px) {
+            width: 127px;
+            height: 176px;
+        }
     }
 
     /* 漢堡條 */
@@ -126,12 +133,12 @@ body {
         top: 50%;
         left: 10px;
         transform: translateY(-50%);
-        
+
         &.hide {
             display: none;
         }
 
-        .bar_line{
+        .bar_line {
             width: 35px;
             height: 5px;
             background-color: #fff;
@@ -139,16 +146,16 @@ body {
             border-radius: 3px;
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             transition-duration: 0.2s;
 
-            &.line1{
+            &.line1 {
                 top: 30%;
             }
 
-            &.line3{
+            &.line3 {
                 top: 70%;
-            }      
+            }
         }
         &:hover {
             .line1 {
@@ -165,7 +172,7 @@ body {
         position: absolute;
         transform-origin: 0 100%;
         top: 53%;
-        transform: rotateZ(90deg) translateY(-27px) ;
+        transform: rotateZ(90deg) translateY(-27px);
         font-size: 15px;
         letter-spacing: 2px;
         color: #fff;
@@ -182,104 +189,145 @@ body {
         color: #fff;
         display: none;
 
-        &.show{   
+        &.show {
             display: inline-block;
         }
     }
 }
 
-
-
 /* 手機板NAV */
-.phone_nav{
+.phone_nav {
     display: none;
     position: relative;
     z-index: 10;
 
     .phone_list {
         position: absolute;
-        right:  0;
+        right: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #3E3A39;
+        background-color: #3e3a39;
         padding-top: 180px;
         transition-duration: 0.5s;
-        /* transition-timing-function: cubic-bezier(.35,-0.31,.63,1.3); */
+        transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
+
+        &.hide {
+            transform: translateX(500px);
+        }
+    }    
+
+    /* 手機板漢堡條 */
+    .phone_ham_bar {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        z-index: 10;
+        top: 20px;
+        right: 30px;
+
+        .phone_bar_line {
+            width: 30px;
+            height: 5px;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 3px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition-duration: 0.2s;
+
+            &.line1 {
+                top: 15%;
+            }
+            &.line3 {
+                top: 85%;
+            }
+
+            &.close {
+                &.line1 {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &.line2 {
+                    opacity: 0;
+                }
+                &.line3 {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+    /* 手機板NAV列表 */
+    .phone_list {
+        &.full {
+        
+            // transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
+            transform: translateX(-10px);
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                display: inline-block;
+                font-size: 32px;
+                padding-left: 40px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 0;
+                color: #fff;
+                position: relative;
+    
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 24%;
+                    right: 76%;
+                    border-bottom: 2px $text_color_nav_hover solid;
+                    transform: translateY(-10px);
+                    transition-duration: 0.6s;
+                }
+              
+                &::after {
+                    content: "Mountain town Ramble Read All";
+                    position: absolute;
+                    font-size: 14px;
+                    // top: 0;
+                    // bottom: 0;
+                    left: 140px;
+                    line-height: 32px;
+                }
+    
+                &:hover {
+                    color: $text_color_nav_hover;
+    
+                    &::after {
+                        color: $text_color_nav;
+                    }
+                    &::before {
+                        left: 12%;
+                        right: 65%;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .phone_nav_pic {
+        position: absolute;
+        width: 70px;
+        height: 100px;
+        background-image: url(../img/LOGO.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 20px;
+        top: 40px;
     }
 }
-
-
-.phone_nav .phone_list.hide {
-    right: -500px;
-}
-/* 手機板漢堡條 */
-.phone_ham_bar {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    z-index: 10;
-    top: 20px;
-    right: 30px;
-}
-
-.phone_ham_bar .phone_bar_line{
-    width: 30px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    border-radius: 3px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    transition-duration: 0.2s;
-}
-
-.phone_bar_line.line1{
-    top: 15%;
-}
-.phone_bar_line.line3{
-    top: 85%;
-}  
-
-.phone_bar_line.line1.close{
-    top: 50%;
-    transform: translate(-50%,-50%) rotate(45deg);
-}
-.phone_bar_line.line2.close{
-    opacity: 0;
-}
-.phone_bar_line.line3.close{
-    top: 50%;
-    transform: translate(-50%,-50%) rotate(-45deg);
-}
-
-/* 手機板NAV列表 */
-
-.phone_nav li {
-    display: inline-block;
-    font-size: 32px;
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-}
-
-.phone_nav li span{
-    font-size: 10px;
-    line-height: 32px;
-    vertical-align: middle;
-    padding-left: 35px;
-}
-
-.phone_nav .phone_nav_pic {
-    position: absolute;
-    width: 70px;
-    height: 100px;
-    background-image: url(../img/phone_nav_pic-02.jpg);
-    left: 20px;
-    top: 40px;
-}
-
 
 /* 左半部 */
 .left_block {
@@ -307,10 +355,10 @@ body {
     right: 155px;
     top: 160px;
     bottom: 80px;
-    max-width: 1080px;    
+    max-width: 1080px;
     background-color: #eee;
     transition-duration: 2s;
-    transition-timing-function: cubic-bezier(.35,-0.31,.63,1.3);
+    transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
 }
 .text_block.text_block_first {
     right: 0;
@@ -331,7 +379,7 @@ body {
     position: absolute;
     left: 45%;
     top: 50%;
-    transform: translate(-50% ,-100%);
+    transform: translate(-50%, -100%);
     /* background-color: #555555; */
 }
 .text_block.text_block_first .title_block h1 {
@@ -341,7 +389,6 @@ body {
     font-size: 55px;
     width: 600px;
 }
-
 
 .text_block .title_block .center {
     margin: auto;
@@ -364,7 +411,7 @@ body {
 }
 
 .text_block_first hr {
-    position: absolute;   
+    position: absolute;
     left: -10px;
     right: -10px;
     color: #000;
@@ -381,21 +428,18 @@ body {
     letter-spacing: 2px;
     transition-duration: 2s;
     background-color: #aaa;
-    overflow:auto
+    overflow: auto;
 }
 
 .text_block > p::scrollbar-track {
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
 }
 
 .text_block > p::scrollbar-thumb {
-	background-color: #000000;
-	border: 2px solid #555555;
+    background-color: #000000;
+    border: 2px solid #555555;
 }
-
-
-
 
 /* 文字右側按鈕區 */
 .text_block .btn_area {
@@ -428,13 +472,13 @@ body {
 
 /* *************動畫************ */
 /* 開場位置 */
-.bookspace.begin{
-    right: 60%;    
+.bookspace.begin {
+    right: 60%;
 }
-.bookspace.end{
+.bookspace.end {
     right: 48%;
     transition-duration: 2s;
-    transition-timing-function: cubic-bezier(.35,-0.31,.63,1.3);    
+    transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
 }
 
 /* .text_block.begin {
@@ -451,20 +495,17 @@ body {
     transform: translateX(100%);
 } */
 
-
-@media screen and (max-width: 1024px){
-   
+@media screen and (max-width: 1024px) {
 }
 
-
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
     .nav {
         display: none;
     }
     .bookspace {
         display: none;
     }
-    .phone_nav{
+    .phone_nav {
         display: block;
     }
 }
