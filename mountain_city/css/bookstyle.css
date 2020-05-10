@@ -1,360 +1,290 @@
-
+@charset "UTF-8";
 ::before,
 ::after {
-	content: "";
+  content: "";
 }
-
-
 
 /*
 	容器
 */
 .bookspace {
-	/* width: 500px; */
-	width: 25vw;
-	height: calc(25vw * 1.4);
-	/* border: black 1px solid; */
+  width: 504px;
+  height: 340px;
 }
 
-.book {
-	position: relative;
-	/* width: 250px; 
-	height: 350px; */
-	width: calc(25vw / 2);
-	height: calc((25vw / 2) * 1.4);
-	
-	/* height: 100% */
-	-webkit-perspective: 1000px;
-	-moz-perspective: 1000px;
-	perspective: 1000px;
-	perspective-origin:0% 50%;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-
-	transform: translateX(calc(25vw / 2)); 
-	/* border: black 1px solid; */
+.bookspace .book {
+  position: relative;
+  width: calc(504px / 2);
+  height: 100%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: 0% 50%;
+          perspective-origin: 0% 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 /*
 首頁  尾頁
 */
 .hardcover_front {
-	transform: rotateY(0deg) ;
-	z-index: 100;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  z-index: 100;
 }
 
 .hardcover_front li:first-child {
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .hardcover_front,
 .hardcover_back,
 .hardcover_front li,
 .hardcover_back li {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .hardcover_front,
 .hardcover_back {
-	transform-origin: left center;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
 .hardcover_front {
-	-webkit-transition: all 4s ease, z-index 0.6s;
-	-moz-transition: all 4s ease, z-index 0.6s;
-	transition: all 4s ease, z-index 0.6s;
+  -webkit-transition: all 4s ease, z-index 0.6s;
+  transition: all 4s ease, z-index 0.6s;
 }
 
 .hardcover_front li:last-child {
-	transform: rotateY(180deg) ;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
 .hardcover_front li:last-child .front {
-	background-image: url(../img/封面.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: absolute;
-	transform: rotateY(180deg);
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0;
+  background-image: url(../img/封面.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0;
 }
 
 .hardcover_front li:last-child .back {
-	background-image: url(../img/翻頁-照片.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 10px;
-	bottom: 10px;
-	left: 20px;
-	right: 0;
-}
-.hardcover_back li:last-child .front {
-	background-image: url(../img/ad.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 10px;
-	bottom: 10px;
-	left: 0;
-	right: 20px;
+  background-image: url(../img/翻頁-照片.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 20px;
+  right: 0;
 }
 
+.hardcover_back li:last-child .front {
+  background-image: url(../img/ad.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 20px;
+}
 
 /* 首頁背面 */
 .hardcover_front li:last-child {
-	background: #999;
+  background: #999;
 }
 
 /* 尾頁背面 */
 .hardcover_back li:last-child {
-	background: #999;
+  background: #999;
 }
 
 /* 透明區域 當翻書按鈕 */
 .hardcover_back::after {
-	content: "";
-	display: block;
-	/* width: 250px;
+  content: "";
+  display: block;
+  /* width: 250px;
 	height: 350px; */
-	transform: translateZ(100px);
-
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .hardcover_front::before {
-	content: "";
-	display: block;
-	/* width: 100%;
+  content: "";
+  display: block;
+  /* width: 100%;
 	height: 350px; */
-	transform: translateZ(-100px);
-	
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+  -webkit-transform: translateZ(-100px);
+          transform: translateZ(-100px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* 每頁圖片 */
-
-.page>li>div {
-	width: 100%;
-	height: 100%;
-	background-position: center;
-	background-size: cover;
-	position: absolute;
-}
-.page li:nth-child(5) .front{
-	background-image: url(../img/翻頁-內文.jpg);
-	backface-visibility: hidden;
-}
-.page li:nth-child(5) .back{
-	background-image: url(../img/未命名-1_2_L.jpg);
-	transform: rotateY(180deg);
-}
-.page li:nth-child(4) .front{
-	background-image: url(../img/未命名-1_2_R.jpg);
-	backface-visibility: hidden;
-}
-.page li:nth-child(4) .back{
-	background-image: url(../img/未命名-1_3_L.jpg);
-	transform: rotateY(180deg);
-}
-.page li:nth-child(3) .front{
-	background-image: url(../img/未命名-1_3_R.jpg);
-	backface-visibility: hidden;
-}
-.page li:nth-child(3) .back{
-	background-image: url(../img/未命名-1_4_L.jpg);
-	transform: rotateY(180deg);
-}
-.page li:nth-child(2) .front{
-	background-image: url(../img/未命名-1_4_R.jpg);
-	backface-visibility: hidden;
-}
-.page li:nth-child(2) .back{
-	background-image: url(../img/未命名-1-02.jpg);
-	transform: rotateY(180deg);
-}
-.page li:nth-child(1) .front{
-	background-image: url(../img/未命名-1-03.jpg);
-	backface-visibility: hidden;
-}
-.page li:nth-child(1) .back{
-	background-image: url(../img/圖2-02.jpg);
-	transform: rotateY(180deg);
+.page > li > div {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
 }
 
+.page li:nth-child(5) .front {
+  background-image: url(../img/翻頁-內文.jpg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
 
+.page li:nth-child(5) .back {
+  background-image: url(../img/未命名-1_2_L.jpg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.page li:nth-child(4) .front {
+  background-image: url(../img/未命名-1_2_R.jpg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.page li:nth-child(4) .back {
+  background-image: url(../img/未命名-1_3_L.jpg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.page li:nth-child(3) .front {
+  background-image: url(../img/未命名-1_3_R.jpg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.page li:nth-child(3) .back {
+  background-image: url(../img/未命名-1_4_L.jpg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.page li:nth-child(2) .front {
+  background-image: url(../img/未命名-1_4_R.jpg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.page li:nth-child(2) .back {
+  background-image: url(../img/未命名-1-02.jpg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.page li:nth-child(1) .front {
+  background-image: url(../img/未命名-1-03.jpg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.page li:nth-child(1) .back {
+  background-image: url(../img/圖2-02.jpg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
 
 .page,
 .page > li {
-	position: absolute;
-	top: 0;
-	left: 0;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-.page {	
-	top: 10px;
-	bottom: 10px;
-	right: 20px;
-	left: 0px;
-	z-index: 10;
+.page {
+  top: 10px;
+  bottom: 10px;
+  right: 20px;
+  left: 0px;
+  z-index: 10;
 }
 
 .page > li {
-	width: 100%;
-	height: 100%;
-	-webkit-transform-origin: left center;
-	-moz-transform-origin: left center;
-	transform-origin: left center;
-	-webkit-transition-property: transform;
-	-moz-transition-property: transform;
-	transition-property: transform;
-	-webkit-transition-timing-function: ease;
-	-moz-transition-timing-function: ease;
-	transition-timing-function: ease;
-	-webkit-transition-duration: 4s;
-	-moz-transition-duration: 4s;
-	transition-duration: 4s;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
 }
 
 /*
 	5. events
 */
-
 .book > .hardcover_front.turn {
-	-webkit-transform: rotateY(-180deg) ;
-	-moz-transform: rotateY(-180deg) ;
-	transform: rotateY(-180deg);
-	z-index: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  z-index: 0;
 }
+
 .book > .page li:nth-child(1).turn {
-	-webkit-transform: rotateY(-180deg) ;
-	-moz-transform: rotateY(-180deg );
-	transform: rotateY(-180deg) translateX(0px);
-	z-index: 5;
+  -webkit-transform: rotateY(-180deg) translateX(0px);
+          transform: rotateY(-180deg) translateX(0px);
+  z-index: 5;
 }
 
 .book > .page li:nth-child(2).turn {
-	-webkit-transform: rotateY(-180deg) ;
-	-moz-transform: rotateY(-180deg) ;
-	transform: rotateY(-180deg) translateX(0px);
-	z-index: 4;
+  -webkit-transform: rotateY(-180deg) translateX(0px);
+          transform: rotateY(-180deg) translateX(0px);
+  z-index: 4;
 }
 
 .book > .page li:nth-child(3).turn {
-	-webkit-transform: rotateY(-180deg);
-	-moz-transform: rotateY(-180deg);
-	transform: rotateY(-180deg) translateX(0px);
-	z-index: 3;
+  -webkit-transform: rotateY(-180deg) translateX(0px);
+          transform: rotateY(-180deg) translateX(0px);
+  z-index: 3;
 }
 
 .book > .page li:nth-child(4).turn {
-	-webkit-transform: rotateY(-180deg) ;
-	-moz-transform: rotateY(-180deg) ;
-	transform: rotateY(-180deg) translateX(0px);
-	z-index: 2;
+  -webkit-transform: rotateY(-180deg) translateX(0px);
+          transform: rotateY(-180deg) translateX(0px);
+  z-index: 2;
 }
 
 .book > .page li:nth-child(5).turn {
-	-webkit-transform: rotateY(-180deg) ;
-	-moz-transform: rotateY(-180deg) ;
-	transform: rotateY(-180deg) translateX(0px);
-	z-index: 1;
+  -webkit-transform: rotateY(-180deg) translateX(0px);
+          transform: rotateY(-180deg) translateX(0px);
+  z-index: 1;
 }
-
-/*
-	6. Bonus
-*/
-
-/* cover CSS */
-
-/* .coverDesign {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-
-
-.coverDesign h1 {
-	color: #fff;
-	font-size: 2.2em;
-	letter-spacing: 0.05em;
-	text-align: center;
-	margin: 54% 0 0 0;
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-}
-
-.coverDesign p {
-	color: #f8f8f8;
-	font-size: 1em;
-	text-align: center;
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-}
-
-
-.blue {
-	background-color: #3498db;
-	background-image: -webkit-linear-gradient(top, #3498db 58%, #2a90d4 0%);
-	background-image: -moz-linear-gradient(top, #3498db 58%, #2a90d4 0%);
-	background-image: linear-gradient(top, #3498db 58%, #2a90d4 0%);
-} */
-
-
-
-
 
 /* Media Queries */
-@media screen and (max-width: 37.8125em) {
-	.align > li {
-		width: 100%;
-		min-height: 440px;
-		height: auto;
-		padding: 0;
-		margin: 0 0 30px 0;
-	}
-
-	.book {
-		margin: 0 auto;
-	}
-
-	figcaption {
-		text-align: center;
-		width: 320px;
-		top: 250px;
-		padding-left: 0;
-		left: -80px;
-		font-size: 90%;
-	}
-}
-
+/*# sourceMappingURL=bookstyle.css.map */

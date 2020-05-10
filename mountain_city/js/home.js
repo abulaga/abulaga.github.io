@@ -198,9 +198,9 @@
             document.querySelector('.phone_list').addEventListener('transitionend',function(e){
                 // width動畫結束才跳頁
                 console.log(e)
-                // if (e.propertyName === 'width'){
-                //     document.location.href="./page2.html"
-                // }
+                if (e.propertyName === 'width'){
+                    document.location.href="./page2.html"
+                }
             })
         })
 
