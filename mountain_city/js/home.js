@@ -76,30 +76,46 @@
     }    
 
     
+    let begin_tab = document.querySelector('.begin_tab') 
+    let page = document.querySelector('.page')    
     // **************下一頁***************
-    document.querySelector('.hardcover_back').addEventListener('click',function(){                
+    document.querySelector('.hardcover_back').addEventListener('click',function(){  
+        console.log(current_page)          
+        
         switch (current_page) {
             case 0:
                 $('.hardcover_front').addClass('turn');
+
+                begin_tab.classList.add('changing')
+                begin_tab.classList.add('hidding')
+                begin_tab.addEventListener('transitionend',page_hidding_end)
+                function page_hidding_end(){
+                    begin_tab.classList.add('hide')
+                    begin_tab.removeEventListener('transitionend',page_hidding_end)
+                    begin_tab.classList.remove('changing')
+                }
                 current_page++;
+                
                 break;
             case 1:
                 $('#page1').addClass('turn')
-                document.getElementById(`text_block${current_page}`).classList.add('hide')
+
+                
+                // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page++;
-                document.getElementById(`text_block${current_page}`).classList.remove('hide')
+                // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 break;
             case 2:
                 $('#page2').addClass('turn')
-                document.getElementById(`text_block${current_page}`).classList.add('hide')
+                // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page++;
-                document.getElementById(`text_block${current_page}`).classList.remove('hide')
+                // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 break;
             case 3:
                 $('#page3').addClass('turn')
-                document.getElementById(`text_block${current_page}`).classList.add('hide')
+                // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page++;
-                document.getElementById(`text_block${current_page}`).classList.remove('hide')
+                // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 break;
             // case 4:
             //     $('#page4').addClass('turn')
@@ -111,35 +127,49 @@
             //     $('#page5').addClass('turn')
             //     current_page++;
             //     break;
-        }        
+        }   
+        
+        console.log(current_page)       
     })
     // **************上一頁***************
     document.querySelector('.hardcover_front').addEventListener('click',function(){
+        console.log(current_page)   
         switch (current_page) {
             case 1:
                 $('.hardcover_front').removeClass('turn');
+
+                begin_tab.classList.add('changing')                
+                begin_tab.classList.remove('hide')
+                window.setTimeout(()=>{begin_tab.classList.remove('hidding')},1)
+                begin_tab.addEventListener('transitionend',page_showing_end)
+                function page_showing_end(){
+                    begin_tab.classList.remove('changing')
+                }
+
                 current_page--;
+
+                
                 break;
             case 2:
-                $('#page1').removeClass('turn')            
-                document.getElementById(`text_block${current_page}`).classList.add('hide')
+                $('#page1').removeClass('turn')    
+
                 current_page--;
                 window.setTimeout(function(){
-                    document.getElementById(`text_block${current_page}`).classList.remove('hide')
+                    // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 },500)
                 
                 break;
             case 3:
                 $('#page2').removeClass('turn')            
-                document.getElementById(`text_block${current_page}`).classList.add('hide')
+                // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page--;
-                document.getElementById(`text_block${current_page}`).classList.remove('hide')
+                // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 break;
             case 4:
                 $('#page3').removeClass('turn')            
-                document.getElementById(`text_block${current_page}`).classList.add('hide')
+                // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page--;
-                document.getElementById(`text_block${current_page}`).classList.remove('hide')
+                // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 break;
             // case 5:
             //     $('#page4').removeClass('turn')            
@@ -152,6 +182,7 @@
             //     current_page--;
             //     break;
         } 
+        console.log(current_page)  
     })
 
     // *************NAVBAR相關*******************
@@ -174,7 +205,6 @@
            
             document.querySelector('.nav').addEventListener('transitionend',function(e){
                 // width動畫結束才跳頁
-                console.log(e)
                 if (e.propertyName === 'width'){
                     document.location.href="./page2.html"
                 }
@@ -184,11 +214,20 @@
     }) 
     //手機板NAV
     document.querySelector('.phone_ham_bar').addEventListener('click',function(){
-        if($('.phone_list').hasClass("hide")){
+        if($('.phone_list').hasClass("hide")){ 
             document.querySelector('.phone_list').classList.remove('hide') 
+            window.setTimeout(function(){
+                document.querySelector('.phone_list').classList.remove('hidding')
+            },1)
             $('.phone_bar_line').addClass('close')
         }else{
-            document.querySelector('.phone_list').classList.add('hide')
+            document.querySelector('.phone_list').classList.add('hidding')
+            document.querySelector('.phone_list').addEventListener('transitionend',add_hide)
+            function add_hide(){
+                document.querySelector('.phone_list').classList.add('hide')
+                document.querySelector('.phone_list').removeEventListener('transitionend',add_hide)
+            }
+            
             $('.phone_bar_line').removeClass('close')
         }        
     })
