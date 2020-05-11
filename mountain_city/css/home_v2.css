@@ -371,27 +371,14 @@ body {
 }
 
 .container_pc .left_block {
+  position: absolute;
   height: 100vh;
   width: 530px;
   -webkit-transform: translate(-60px, -100px);
           transform: translate(-60px, -100px);
-}
-
-.container_pc .left_block .pic_up {
-  background-image: url(../img/首頁-左圖-02.jpg);
+  background-image: url(../img/PC_530x1080-14.png);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 55%;
-}
-
-.container_pc .left_block .pic_down {
-  background-image: url(../img/首頁-左圖-03.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: contain;
-  width: 100%;
-  height: 45%;
 }
 
 .container_pc .right_block {
@@ -571,6 +558,32 @@ body {
   border: black 1px solid;
   padding-top: 37px;
   margin: 0 auto;
+}
+
+.container_pc .right_block .tab_his .left_area .top_block .title_area .dot {
+  width: 31px;
+  height: 24px;
+  background-image: url(../img/dot.png);
+  padding: 3px 0;
+}
+
+.container_pc .right_block .tab_his .left_area .top_block .title_area .title {
+  font-size: 55px;
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+.container_pc .right_block .tab_his .left_area .top_block .title_area hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 40px;
+}
+
+.container_pc .right_block .tab_his .left_area .top_block .title_area .sub_title {
+  font-size: 21px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .container_pc .right_block .tab_his .right_area {

@@ -347,24 +347,35 @@ body {
 
     /* 左半部 */
     .left_block {
+        position: absolute;        
         height: 100vh;
         width: 530px;
         transform: translate(-60px, -100px);
-        .pic_up {
-            background-image: url(../img/首頁-左圖-02.jpg);
+        background-image: url(../img/PC_530x1080-14.png);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 100%;
-            height: 55%;
-        }
-        .pic_down {
-            background-image: url(../img/首頁-左圖-03.jpg);
-            background-repeat: no-repeat;
-            background-position: 0 100%;
-            background-size: contain;
-            width: 100%;
-            height: 45%;
-        }
+        // .pic_up {
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     background-image: url(../img/PC_T.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     width: 430px;
+        //     height: 567px;
+        //     z-index: 1;
+        // }
+        // .pic_down {
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: 0;
+
+        //     background-image: url(../img/PC_B.png);
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     width: 430px;
+        //     height: 502px;
+        // }
     }
 
     .right_block {
@@ -524,7 +535,29 @@ body {
                         border: black 1px solid;
                         padding-top: 37px;
                         margin: 0 auto;
-                        
+
+                        .dot {
+                            width: 31px;
+                            height: 24px;
+                            background-image: url(../img/dot.png);
+                            padding: 3px 0;
+                        }
+                        .title {
+                            font-size: 55px;
+                            padding-top: 14px;
+                            padding-bottom: 12px;
+                        }
+                        hr {
+                            margin-top: 4px;
+                            margin-bottom: 4px;
+                            margin-left: 40px;
+                        }
+                        .sub_title {
+                            font-size: 21px;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                        }
                     }
                 }
             }
