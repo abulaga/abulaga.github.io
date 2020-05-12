@@ -1,334 +1,13 @@
 @import "_style-guild.scss";
+@import "_navbar.scss";
+
 
 body {
     width: 100vw;
     overflow: hidden;
 }
 
-.nav {
-    position: absolute;
-    width: 62px;
-    height: 100%;
-    background-color: $bk_nav;
-    background-image: url("../img/background.png");
-    background-size: cover;
-    background-position: left;
-    right: 0;
-    z-index: 10;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.35, -0.2, 0.63, 1.3);
-    overflow: hidden;
 
-    &.open {
-        position: absolute;
-        width: 693px;
-        height: 100%;
-        right: 0;
-        z-index: 100;
-
-        // @media (max-width: 768px) {
-        //     width: 100%;
-        // }
-    }
-
-    &.full {
-        transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
-        width: 105%;
-
-        .nav_pic {
-            display: block;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        &.nav {
-            display: none;
-        }
-    }
-
-    ul {
-        position: absolute;
-        left: 170px;
-        top: 50%;
-        transform: translateY(-50%);
-
-        li::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            right: 50%;
-            border-bottom: 2px $text_color_nav_hover solid;
-            transform: translateY(-10px);
-            transition-duration: 0.6s;
-        }
-
-        li {
-            width: 100px;
-            font-size: 40px;
-            line-height: 100px;
-            color: #fff;
-            position: relative;
-
-            &::after {
-                content: "Mountain town Ramble Read All";
-                position: absolute;
-                font-size: 14px;
-                top: 0;
-                bottom: 0;
-                width: 232px;
-                left: 130px;
-            }
-
-            &:hover {
-                color: $text_color_nav_hover;
-
-                &::after {
-                    color: $text_color_nav;
-                }
-            }
-        }
-
-        :hover::before {
-            left: 0%;
-            right: 0%;
-        }
-    }
-
-    .nav_pic {
-        position: absolute;
-        width: 252px;
-        height: 354px;
-        background-image: url(../img/LOGO.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        left: 70vw;
-        top: 52px;
-        display: none;
-
-        @media (max-width: 768px) {
-            width: 127px;
-            height: 176px;
-        }
-    }
-
-    /* 漢堡條 */
-    .ham_bar {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-
-        &.hide {
-            display: none;
-        }
-
-        .bar_line {
-            width: 35px;
-            height: 5px;
-            background-color: #fff;
-            position: absolute;
-            border-radius: 3px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition-duration: 0.2s;
-
-            &.line1 {
-                top: 30%;
-            }
-
-            &.line3 {
-                top: 70%;
-            }
-        }
-        &:hover {
-            .line1 {
-                top: 25%;
-            }
-            .line3 {
-                top: 75%;
-            }
-        }
-    }
-    // 漢堡條底下文字
-    h1 {
-        width: 300px;
-        position: absolute;
-        transform-origin: 0 100%;
-        top: 53%;
-        transform: rotateZ(90deg) translateY(-27px);
-        font-size: 15px;
-        letter-spacing: 2px;
-        color: #fff;
-    }
-    // 縮回去的按鈕
-    .nav_back {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 50px;
-        left: 21px;
-        color: #fff;
-        display: none;
-
-        &.show {
-            display: inline-block;
-        }
-    }
-}
-
-/* 手機板NAV */
-.phone_nav {
-    display: none;
-    position: relative;
-    z-index: 100;
-
-    @media screen and (max-width: 768px) {
-        & {
-            display: block;
-        }
-    }
-
-    .phone_list {
-        position: absolute;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #3e3a39;
-        padding-top: 180px;
-        transition-duration: 1s;
-        // transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
-
-        &.hide {
-            display: none;
-        }
-        &.hidding {
-            transform: translateX(100%);
-        }
-    }
-
-    /* 手機板漢堡條 */
-    .phone_ham_bar {
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        z-index: 10;
-        top: 20px;
-        right: 30px;
-
-        .phone_bar_line {
-            width: 30px;
-            height: 5px;
-            background-color: #fff;
-            position: absolute;
-            border-radius: 3px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition-duration: 0.2s;
-
-            &.line1 {
-                top: 15%;
-            }
-            &.line3 {
-                top: 85%;
-            }
-
-            &.close {
-                &.line1 {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(45deg);
-                }
-                &.line2 {
-                    opacity: 0;
-                }
-                &.line3 {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(-45deg);
-                }
-            }
-        }
-    }
-    /* 手機板NAV列表 */
-    .phone_list {
-        &.full {
-            width: 105vw;
-        }
-        ul {
-            display: flex;
-            flex-direction: column;
-            li {
-                display: inline-block;
-                font-size: 32px;
-                padding-left: 40px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                padding-right: 0;
-                color: #fff;
-                position: relative;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 24%;
-                    right: 76%;
-                    border-bottom: 2px $text_color_nav_hover solid;
-                    transform: translateY(-10px);
-                    transition-duration: 0.6s;
-                }
-
-                &::after {
-                    content: "Mountain town Ramble Read All";
-                    position: absolute;
-                    font-size: 14px;
-                    // top: 0;
-                    // bottom: 0;
-                    left: 140px;
-                    line-height: 32px;
-                }
-
-                &:hover {
-                    color: $text_color_nav_hover;
-
-                    &::after {
-                        color: $text_color_nav;
-                    }
-                    &::before {
-                        left: 12%;
-                        right: 65%;
-                    }
-                }
-            }
-        }
-    }
-
-    .phone_nav_pic {
-        position: absolute;
-        width: 70px;
-        height: 100px;
-        background-image: url(../img/LOGO.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        left: 20px;
-        top: 40px;
-    }
-
-    @media screen and (max-width: 375px) {
-        &.phone_nav {
-            display: block;
-        }
-    }
-}
 
 .home {
     width: 100vw;
@@ -347,80 +26,71 @@ body {
 
     /* 左半部 */
     .left_block {
-        position: absolute;        
+        position: absolute;
         height: 100vh;
         width: 530px;
         transform: translate(-60px, -100px);
         background-image: url(../img/PC_530x1080-14.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-        // .pic_up {
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        //     background-image: url(../img/PC_T.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     width: 430px;
-        //     height: 567px;
-        //     z-index: 1;
-        // }
-        // .pic_down {
-        //     position: absolute;
-        //     left: 0;
-        //     bottom: 0;
-
-        //     background-image: url(../img/PC_B.png);
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     width: 430px;
-        //     height: 502px;
-        // }
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media (max-width: 1400px){
+            width: 413px;
+        }
+      
     }
 
     .right_block {
         width: calc(100% - 530px + 60px - 62px);
-        // height: 600px;
         height: 68%;
         position: absolute;
         right: 62px;
         top: 50%;
         transform: translateY(-50%);
 
+
+        @media (max-width:1400px ){
+            width: calc(100% - 413px + 60px - 62px);
+            height: 100%;
+            border: solid 1px black;
+        }
         //new書
 
         .align_bookspace {
-            position: absolute;
+            display: none;
+            position: absolute; 
             width: 740px;
             top: 29%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
+            &.begin {
+                display: block;               
 
-            .align_block {
-                width: 470px;
-                position: absolute;
-                right: 0;
-
-                .bookspace {
-                    position: absolute;
-                    left: -522px;
-                }
-            }
-
-            @media (max-width: 1400px) {
-                & {
-                    width: 100%;
-                    top: 53%;
-                    display: block;
-                }
                 .align_block {
-                    width: 60vw;
-                    height: 100%;
+                    width: 470px;
+                    position: absolute;
+                    right: 0;
+
                     .bookspace {
                         position: absolute;
-                        left: 50%;
-                        transform: translateX(-75%);
+                        left: -522px;
+                    }
+                }
+
+                @media (max-width: 1400px) {
+                    & {
+                        width: 100%;
+                        top: 53%;
+                        display: block;
+                    }
+                    .align_block {
+                        width: 60vw;
+                        height: 100%;
+                        .bookspace {
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-75%);
+                        }
                     }
                 }
             }
@@ -522,42 +192,100 @@ body {
             background-color: #edede5;
             position: relative;
 
+            @media (max-width:1400px){
+            }
+
             .left_area {
                 height: 100%;
 
-                .top_block{
+                .top_block {
                     width: 100%;
                     height: 213px;
                     border: black 1px solid;
                     .title_area {
-                        width: 902px;
+                        max-width: 902px;
+                        width: 100%;
                         height: 144px;
-                        border: black 1px solid;
                         padding-top: 37px;
                         margin: 0 auto;
+                        .align_center {
+                            margin-left: 100px;
+                            margin-right: 200px;
 
-                        .dot {
-                            width: 31px;
-                            height: 24px;
-                            background-image: url(../img/dot.png);
-                            padding: 3px 0;
+                            @media (max-width:1400px){
+                                &{
+                                    margin-left: 30px;
+                                    margin-right: calc(55px + 113px);
+                                }
+                            }
+
+                            .dot {
+                                width: 31px;
+                                height: 24px;
+                                background-image: url(../img/dot.png);
+                                background-repeat: no-repeat;
+                                padding: 3px 0;
+                            }
+                            .title {
+                                font-size: 55px;
+                                padding-top: 14px;
+                                padding-bottom: 12px;
+                                span{
+                                    display: inline-block;
+                                    width: 55px;
+                                    height: 55px;
+                                    background-image: url(../img/title_cross.png);
+                                    // background-size: cover;
+                                    background-position: center;
+                                }
+                            }
+                            hr {
+                                margin-top: 4px;
+                                margin-bottom: 4px;
+                            }
+                            .sub_title {
+                                font-size: 21px;
+                                text-align: end;
+                            }
                         }
-                        .title {
-                            font-size: 55px;
-                            padding-top: 14px;
-                            padding-bottom: 12px;
-                        }
-                        hr {
-                            margin-top: 4px;
-                            margin-bottom: 4px;
-                            margin-left: 40px;
-                        }
-                        .sub_title {
-                            font-size: 21px;
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                        }
+                    }
+                }
+
+                .bottom_block {
+                    height: calc(100% - 213px);
+                    // border: black solid 1px;
+                    .left_side {
+                        width: 36%;
+                        height: 100%;
+                        background-color: #aaa;
+                        float: left;
+                    }
+                    .right_side{
+                        width: 64%;
+                        height: 100%;
+                        background-color: cadetblue;
+                        float: left;
+
+                        .align_left{
+                            width: calc(100% - 131px);
+                            height: 100%;
+                            p{  
+                                height: calc(100% - 12px);
+                                // border: black 1px solid;
+                                margin-left: 48px;
+                                margin-right: 48px;
+                                margin-bottom: 8px;
+                                margin-top: 4px;
+                                padding-right: 4px;
+                                padding-left: 4px;
+                                overflow: auto;
+                            }
+                            @media (max-width:1400px){
+                                &{
+                                    width: calc(100% - 113px);
+                                }
+                            }
+                        }                        
                     }
                 }
             }
@@ -565,14 +293,44 @@ body {
                 position: absolute;
                 right: 0;
                 top: 0;
-                width: 9.4%;
+                width: 131px;
                 height: 100%;
 
                 .v_line {
                     width: 5px;
                     height: 100%;
-                    background-color: #C6C6C6;
-                    border-radius: 2px;
+                    background-color: #c6c6c6;
+                    border-radius: 2px;                    
+                }
+
+                .buttom_area{
+                    width: 39px;
+                    height: 55px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 38px;
+                    transform: translateX(-50%);
+                    
+                    .more_icon {
+                        width: 39px;
+                        height: 31px;
+                        background-image: url(../img/more_icon.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .more_text {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        padding-bottom: 3px;
+                        border-bottom: 1px solid #000;
+                    }
+                }
+                @media (max-width:1400px){
+                    &{
+                        width: 113px;
+                    }
                 }
             }
         }

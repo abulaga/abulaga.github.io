@@ -7,10 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/page2.css" media="screen" type="text/css">
+    
 </head>
 
 <body>
-    <nav class="nav ">
+    <nav class="nav full">
         <!-- 漢堡條 -->
         <div class="ham_bar ">
             <div class="bar_line line1"></div>
@@ -27,32 +28,37 @@
             </ul>
         </div>
 
-
         <div class="nav_pic"></div>
-        <i class="fas fa-angle-right nav_back"></i>
+        <div class="nav_pic_text">Mountain town Ramble Read All</div>
+        <div class="nav_back"></div>
     </nav>
-    <nav class="phone_nav">
+    <nav class="phone_nav ">
         <div class="phone_ham_bar">
             <div class="phone_bar_line line1 "></div>
             <div class="phone_bar_line line2 "></div>
             <div class="phone_bar_line line3 "></div>
         </div>
-        <div class="phone_list hide">
+        <div class="phone_list hide hidding">
             <ul>
-                <li>首 &nbsp;頁<span>Mountain town Ramble Read All</span></li>
-                <li>慢 &nbsp;遊<span>Mountain town Ramble Read All</span></li>
-                <li>慢 &nbsp;活<span>Mountain town Ramble Read All</span></li>
-                <li>慢 &nbsp;食<span>Mountain town Ramble Read All</span></li>
+                <li>首 &nbsp;頁</li>
+                <li>慢 &nbsp;遊</li>
+                <li>慢 &nbsp;活</li>
+                <li>慢 &nbsp;食</li>
             </ul>
-            <div class="phone_nav_pic"></div>
+            <div class="nav_back"></div>
         </div>
+    </nav>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/navbar.js"></script>
 
         <script>
-            (function () {
-                window.setTimeout(function () {
-                    document.querySelector('nav').classList.remove('full')
-                }, 0)
-            })()
+            // (function () {
+            //     window.setTimeout(function () {
+            //         document.querySelector('nav').classList.remove('full')
+            //     }, 0)
+            // })()
         </script>
 </body>
 

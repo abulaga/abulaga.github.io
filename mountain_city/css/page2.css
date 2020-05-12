@@ -1,26 +1,4 @@
 @charset "UTF-8";
-body {
-  width: 100vw;
-  overflow: hidden;
-  background-color: #999;
-}
-
-.home {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-color: #ddd;
-}
-
-.container {
-  position: absolute;
-  left: 98px;
-  right: 0;
-  top: 134px;
-  bottom: 80px;
-  background-color: #fff;
-}
-
 .nav {
   position: absolute;
   width: 62px;
@@ -47,23 +25,13 @@ body {
   z-index: 100;
 }
 
-@media (max-width: 768px) {
-  .nav.open {
-    width: 100%;
-  }
-}
-
 .nav.full {
   -webkit-transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
           transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
   width: 105%;
 }
 
-.nav.full .nav_pic {
-  display: block;
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .nav.nav {
     display: none;
   }
@@ -97,6 +65,7 @@ body {
   line-height: 100px;
   color: #fff;
   position: relative;
+  z-index: 101;
 }
 
 .nav ul li::after {
@@ -124,15 +93,19 @@ body {
 
 .nav .nav_pic {
   position: absolute;
-  width: 252px;
-  height: 354px;
-  background-image: url(../img/LOGO.png);
+  width: 152px;
+  height: 211px;
+  background-image: url(../img/navbar/LOGO.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  left: 70vw;
-  top: 52px;
+  left: calc(100vw - 133px - 152px + 5%);
+  bottom: 69px;
   display: none;
+}
+
+.nav .nav_pic.show {
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -142,14 +115,35 @@ body {
   }
 }
 
+.nav .nav_pic_text {
+  position: absolute;
+  font-size: 13px;
+  font-family: "微軟正黑體";
+  font-weight: bold;
+  color: #fff;
+  opacity: 0.5;
+  line-height: 12px;
+  width: 287px;
+  height: 14px;
+  bottom: 83px;
+  text-align: right;
+  left: calc(100vw - 324px - 287px + 5%);
+  letter-spacing: 0.2em;
+  display: none;
+}
+
+.nav .nav_pic_text.show {
+  display: block;
+}
+
 .nav .ham_bar {
   width: 50px;
   height: 50px;
   position: absolute;
   top: 50%;
-  left: 10px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  left: calc(62px / 2);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .nav .ham_bar.hide {
@@ -192,8 +186,8 @@ body {
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
   top: 53%;
-  -webkit-transform: rotateZ(90deg) translateY(-27px);
-          transform: rotateZ(90deg) translateY(-27px);
+  -webkit-transform: rotateZ(90deg) translateY(-23px);
+          transform: rotateZ(90deg) translateY(-23px);
   font-size: 15px;
   letter-spacing: 2px;
   color: #fff;
@@ -201,28 +195,36 @@ body {
 
 .nav .nav_back {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   top: 50%;
+  background-image: url(../img/navbar/back_icon.png);
+  background-position: center;
+  background-size: cover;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 50px;
-  left: 21px;
-  color: #fff;
+  left: 10px;
   display: none;
 }
 
 .nav .nav_back.show {
-  display: inline-block;
+  display: block;
 }
 
 /* 手機板NAV */
 .phone_nav {
   display: none;
   position: relative;
-  z-index: 10;
+  z-index: 100;
   /* 手機板漢堡條 */
   /* 手機板NAV列表 */
+}
+
+@media screen and (max-width: 768px) {
+  .phone_nav {
+    display: block;
+  }
 }
 
 .phone_nav .phone_list {
@@ -237,8 +239,12 @@ body {
 }
 
 .phone_nav .phone_list.hide {
-  -webkit-transform: translateX(500px);
-          transform: translateX(500px);
+  display: none;
+}
+
+.phone_nav .phone_list.hidding {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .phone_nav .phone_ham_bar {
@@ -364,5 +370,27 @@ body {
   .phone_nav.phone_nav {
     display: block;
   }
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #999;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #ddd;
+}
+
+.container {
+  position: absolute;
+  left: 98px;
+  right: 0;
+  top: 134px;
+  bottom: 80px;
+  background-color: #fff;
 }
 /*# sourceMappingURL=page2.css.map */
