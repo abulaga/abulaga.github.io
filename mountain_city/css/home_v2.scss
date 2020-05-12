@@ -56,7 +56,9 @@ body {
         //new書
 
         .align_bookspace {
-            display: none;
+            // display: none;
+            opacity: 0;
+
             position: absolute; 
             width: 740px;
             top: 29%;

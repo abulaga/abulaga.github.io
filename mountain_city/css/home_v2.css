@@ -69,13 +69,31 @@
 }
 
 .nav ul li::after {
-  content: "Mountain town Ramble Read All";
   position: absolute;
-  font-size: 14px;
+  font-size: 13px;
+  font-family: "微軟正黑體";
+  letter-spacing: 0.1em;
   top: 0;
   bottom: 0;
-  width: 232px;
+  width: 246px;
   left: 130px;
+  white-space: pre;
+}
+
+.nav ul li:nth-of-type(1)::after {
+  content: "Home";
+}
+
+.nav ul li:nth-of-type(2)::after {
+  content: "Take  your  time  in  your  travel";
+}
+
+.nav ul li:nth-of-type(3)::after {
+  content: "Enjoy  activities  in  for  season";
+}
+
+.nav ul li:nth-of-type(4)::after {
+  content: "Try  to  taste  local  foods";
 }
 
 .nav ul li:hover {
@@ -106,13 +124,6 @@
 
 .nav .nav_pic.show {
   display: block;
-}
-
-@media (max-width: 768px) {
-  .nav .nav_pic {
-    width: 127px;
-    height: 176px;
-  }
 }
 
 .nav .nav_pic_text {
@@ -214,37 +225,21 @@
 
 /* 手機板NAV */
 .phone_nav {
+  width: 100vw;
+  height: 100vh;
   display: none;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   z-index: 100;
   /* 手機板漢堡條 */
   /* 手機板NAV列表 */
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .phone_nav {
     display: block;
   }
-}
-
-.phone_nav .phone_list {
-  position: absolute;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #3e3a39;
-  padding-top: 180px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-.phone_nav .phone_list.hide {
-  display: none;
-}
-
-.phone_nav .phone_list.hidding {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
 }
 
 .phone_nav .phone_ham_bar {
@@ -278,6 +273,10 @@
   top: 85%;
 }
 
+.phone_nav .phone_ham_bar .phone_bar_line.close {
+  display: none;
+}
+
 .phone_nav .phone_ham_bar .phone_bar_line.close.line1 {
   top: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -294,11 +293,60 @@
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+@media (max-width: 600px) {
+  .phone_nav .phone_ham_bar .phone_bar_line.close {
+    display: block;
+  }
+}
+
+.phone_nav .phone_list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/navbar/background.png);
+  background-color: #3E3A39;
+  background-size: cover;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
+          transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
+}
+
+.phone_nav .phone_list.hide {
+  display: none;
+}
+
+.phone_nav .phone_list.hidding {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
 .phone_nav .phone_list.full {
   width: 105vw;
 }
 
+.phone_nav .phone_list.longer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  right: -50px;
+  background-color: #3E3A39;
+}
+
 .phone_nav .phone_list ul {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 422px;
+  height: 472px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,37 +356,88 @@
           flex-direction: column;
 }
 
+@media (max-width: 600px) {
+  .phone_nav .phone_list ul {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    left: 50%;
+    top: 28%;
+    width: 300px;
+    height: 302px;
+  }
+}
+
 .phone_nav .phone_list ul li {
-  display: inline-block;
-  font-size: 32px;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 0;
+  font-family: "新宋体";
+  font-size: 54px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: #fff;
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .phone_nav .phone_list ul li {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 .phone_nav .phone_list ul li::before {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 24%;
-  right: 76%;
-  border-bottom: 2px #DBB13C solid;
+  bottom: -34px;
+  left: 16%;
+  right: 84%;
+  border-bottom: 3px #DBB13C solid;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
 }
 
+@media (max-width: 600px) {
+  .phone_nav .phone_list ul li::before {
+    bottom: -21px;
+  }
+}
+
 .phone_nav .phone_list ul li::after {
-  content: "Mountain town Ramble Read All";
   position: absolute;
   font-size: 14px;
-  left: 140px;
+  font-family: "微軟正黑體";
+  letter-spacing: 0.1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 190px;
   line-height: 32px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .phone_nav .phone_list ul li::after {
+    left: 110px;
+    font-size: 8px;
+  }
+}
+
+.phone_nav .phone_list ul li:nth-of-type(1)::after {
+  content: "Home";
+}
+
+.phone_nav .phone_list ul li:nth-of-type(2)::after {
+  content: "Take  your  time  in  your  travel";
+}
+
+.phone_nav .phone_list ul li:nth-of-type(3)::after {
+  content: "Enjoy  activities  in  for  season";
+}
+
+.phone_nav .phone_list ul li:nth-of-type(4)::after {
+  content: "Try  to  taste  local  foods";
 }
 
 .phone_nav .phone_list ul li:hover {
@@ -350,25 +449,75 @@
 }
 
 .phone_nav .phone_list ul li:hover::before {
-  left: 12%;
-  right: 65%;
+  left: 0;
+  right: 68%;
 }
 
-.phone_nav .phone_nav_pic {
+@media (max-width: 600px) {
+  .phone_nav .phone_list ul li:hover::before {
+    right: 69%;
+  }
+}
+
+.phone_nav .phone_list .phone_nav_pic {
   position: absolute;
-  width: 70px;
-  height: 100px;
-  background-image: url(../img/LOGO.png);
+  width: 135px;
+  height: 178px;
+  background-image: url(../img/navbar/LOGO.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  left: 20px;
-  top: 40px;
+  right: 44px;
+  top: 54px;
 }
 
-@media screen and (max-width: 375px) {
-  .phone_nav.phone_nav {
-    display: block;
+@media (max-width: 600px) {
+  .phone_nav .phone_list .phone_nav_pic {
+    width: 50px;
+    height: 72px;
+    left: 8%;
+    top: 8%;
+  }
+}
+
+.phone_nav .phone_list h1 {
+  width: 300px;
+  position: absolute;
+  font-size: 13px;
+  font-family: "微軟正黑體";
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  top: 55%;
+  -webkit-transform: rotateZ(90deg) translateY(-23px);
+          transform: rotateZ(90deg) translateY(-23px);
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .phone_nav .phone_list h1 {
+    display: none;
+  }
+}
+
+.phone_nav .phone_list .nav_back {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  background-image: url(../img/navbar/back_icon.png);
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 50px;
+  left: 12px;
+}
+
+@media (max-width: 600px) {
+  .phone_nav .phone_list .nav_back {
+    display: none;
   }
 }
 
@@ -430,7 +579,7 @@ body {
 }
 
 .container_pc .right_block .align_bookspace {
-  display: none;
+  opacity: 0;
   position: absolute;
   width: 740px;
   top: 29%;

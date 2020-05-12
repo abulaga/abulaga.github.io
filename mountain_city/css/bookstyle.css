@@ -1,9 +1,4 @@
 @charset "UTF-8";
-::before,
-::after {
-  content: "";
-}
-
 /*
 	容器
 */
