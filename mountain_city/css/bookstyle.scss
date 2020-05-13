@@ -88,9 +88,9 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: absolute;
-	top: 10px;
-	bottom: 10px;
-	left: 20px;
+	top: 2%;
+	bottom: 2%;
+	left: 3%;
 	right: 0;
 }
 .hardcover_back li:last-child .front {
@@ -99,10 +99,10 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: absolute;
-	top: 10px;
-	bottom: 10px;
+	top: 2%;
+	bottom: 2%;
 	left: 0;
-	right: 20px;
+	right: 3%;
 }
 
 
@@ -206,9 +206,9 @@
 }
 
 .page {	
-	top: 10px;
-	bottom: 10px;
-	right: 20px;
+	top: 2%;
+	bottom: 2%;
+	right: 3%;
 	left: 0px;
 	z-index: 10;
 }

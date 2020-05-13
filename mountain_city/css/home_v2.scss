@@ -23,6 +23,10 @@ body {
     bottom: 9%;
     background-color: $bk_home_container;
 
+    @media (max-width:500px){
+        left: 20px;
+    }
+
     /* 左半部 */
     .left_block {
         position: absolute;
@@ -34,6 +38,14 @@ body {
         background-size: contain;
         @media (max-width: 1400px) {
             width: 413px;
+        }
+        @media (max-width: 1200px) {
+            width: 21%;
+            height: 34%;
+            background-image: url(../img/home/icon_s.png);
+            background-position: 0% 0%;
+            transform:initial;
+            // background-color: #ddd;
         }
     }
 
@@ -50,6 +62,13 @@ body {
             height: 100%;
             // border: solid 1px black;
         }
+        @media (max-width: 1200px) {
+            width: 100%;   
+            right: 0;
+            transform: initial;
+            top: 0;
+            bottom: 0;
+        }
         //new書
 
         .align_bookspace {
@@ -57,44 +76,60 @@ body {
             // opacity: 0;
 
             position: absolute;
-            width: 740px;
+            // width: 740px;
             top: 29%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
             // border: 1px black solid;
-            &.begin {
-                display: block;
+            transition-duration: 1s;
+            // &.begin {
+            //     display: block;
 
-                .align_block {
-                    width: 470px;
-                    position: absolute;
-                    right: 0;
+            //     .align_block {
+            //         width: 470px;
+            //         position: absolute;
+            //         right: 0;
 
-                    .bookspace {
-                        position: absolute;
-                        left: -522px;
-                        right: 0;
-                    }
-                }
+            //         .bookspace {
+            //             position: absolute;
+            //             left: -522px;
+            //             right: 0;
+            //         }
+            //     }
 
-                @media (max-width: 1400px) {
-                    & {
-                        width: 100%;
-                        top: 53%;
-                        display: block;
-                    }
-                    .align_block {
-                        width: 60vw;
-                        height: 100%;
-                        .bookspace {
-                            position: absolute;
-                            left: 50%;
-                            transform: translateX(-75%);
-                        }
-                    }
-                }
-            }
+            //     @media (max-width: 1400px) {
+            //         & {
+            //             width: 100%;
+            //             top: 53%;
+            //             display: block;
+            //         }
+            //         .align_block {
+            //             width: 60vw;
+            //             height: 100%;
+            //             // border: 1px black solid;
+            //             .bookspace {
+            //                 position: absolute;
+            //                 left: 50%;
+            //                 transform: translateX(-75%);
+            //                 // border: 1px black solid;
+            //             }
+            //         }
+            //     }
+            //     @media (max-width: 1400px) {
+            //         .align_block {
+            //             width: 60vw;
+            //             height: 100%;
+            //             border: 1px black solid;
+            //             .bookspace {
+            //                 position: absolute;
+            //                 left: 50%;
+            //                 transform: translateX(-75%);
+            //                 border: 1px black solid;
+            //             }
+            //         }
+            //     }
+            // }
             &.normal {
                 // display: block;
                 width: 64%;
@@ -117,19 +152,35 @@ body {
 
                 @media (max-width: 1400px) {
                     & {
-                        // width: 100%;
                         width: 100%;
-                        top: 9%;
+                        top: 3%;
                         display: block;
                     }
                     .align_block {
-                        width: 60vw;
-                        height: 100%;
+                        width: 100%;
+                        // border: 1px black solid;
                         .bookspace {
                             position: absolute;
                             left: 50%;
                             width: 52%;
                             transform: translateX(-50%);
+                            // border: 1px black solid;
+                        }
+                    }
+                }
+                @media (max-width: 1200px) {
+                    width: 91%;
+                    top: 2%;
+                    .align_block {
+                        width: 100%;
+                        // border: 1px black solid;
+                        .bookspace {
+                            position: absolute;
+                            left: 50%;
+                            width: 372px;
+                            height: 260px;
+                            transform: translateX(-50%);
+                            // border: 1px black solid;
                         }
                     }
                 }
@@ -152,14 +203,18 @@ body {
         .begin_tab {
             position: absolute;
             width: 100%;
-            top: 0;
-            bottom: 0;
+            top: 16%;
+            bottom: 16%;
             background-color: #edede5;
 
             @media (max-width: 1400px) {
                 width: 60vw;
                 right: 0;
             }
+            @media (max-width: 1200px) {
+                width: 81vw;
+            }
+            
 
             .center_block {
                 width: 740px;
@@ -170,15 +225,58 @@ body {
                 display: flex;
                 justify-content: center;
 
+                @media (max-width: 1400px) {
+                    & {
+                        height: 100%;
+                        top: 0;
+                        right: 0;
+                        left: initial;
+                        width: 60vw;
+                        transform: translateX(0);
+                    }
+
+                    & .space_area {
+                        display: none;
+                    }
+                    & .title_area {
+                        position: absolute;
+                        width: 410px;
+                        top: 20%;
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    width: 100%;
+                    height: initial;
+                    top: -40%;
+                    bottom: -40%;
+                    transform: initial;
+                    display: block;
+                    background-image: url(../img/home/首頁-平板手機.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    transform: translateX(18%);
+                }
+
+
+
                 .space_area {
                     width: 261px;
                     height: 50px;
+
+                    @media (max-width: 1200px) {
+                        display: none;
+                    }
                 }
 
                 .title_area {
                     width: calc(100% - 261px);
                     height: 155px;
                     position: relative;
+
+                    @media (max-width: 1200px) {
+                        display: none;
+                    }
 
                     .dot {
                         font-size: 55px;
@@ -204,25 +302,7 @@ body {
                         bottom: 0;
                     }
                 }
-                @media (max-width: 1400px) {
-                    & {
-                        height: 100%;
-                        top: 0;
-                        right: 0;
-                        left: initial;
-                        width: 60vw;
-                        transform: translateX(0);
-                    }
-
-                    & .space_area {
-                        display: none;
-                    }
-                    & .title_area {
-                        position: absolute;
-                        width: 410px;
-                        top: 20%;
-                    }
-                }
+                
             }
         }
         .tab_his {
@@ -235,6 +315,19 @@ body {
                 height: 44%;
                 top: 52%;
             }
+            @media (max-width: 1200px) {
+                width: 91%;
+                right: 0;
+                height: 73.6%;
+                top: initial;
+                bottom: 0;
+            }
+            @media (max-width: 700px) {
+                width: 94%;               
+            }
+            @media (max-width: 500px) {
+                width: 98%;               
+            }
 
             .left_area {
                 height: 100%;
@@ -245,6 +338,9 @@ body {
 
                     @media (max-width: 1400px) {
                         height: 82px;
+                    }
+                    @media (max-width: 1200px) {
+                        height: 30%;
                     }
                     .title_area {
                         max-width: 902px;
@@ -257,6 +353,11 @@ body {
                             padding-top: 0;
                             top: -60px;
                         }
+                        @media (max-width: 1200px) {
+                            
+                            max-width: none;
+                            top: 11%;
+                        }
                         .align_center {
                             margin-left: 100px;
                             margin-right: 200px;
@@ -265,6 +366,24 @@ body {
                                 & {
                                     margin-left: 30px;
                                     margin-right: calc(55px + 113px);
+                                }
+                            }
+                            @media (max-width: 1200px) {
+                                & {
+                                    margin-left: 65px;
+                                    margin-right: calc(44px + 113px);
+                                }
+                            }
+                            @media (max-width: 700px) {
+                                & {
+                                    margin-left: 30px;
+                                    margin-right: 50px;
+                                }
+                            }
+                            @media (max-width: 500px) {
+                                & {
+                                    margin-left: 10px;
+                                    margin-right: 10px;
                                 }
                             }
 
@@ -279,7 +398,6 @@ body {
                                 font-size: 55px;
                                 font-family: "微軟正黑體";
                                 font-weight: bold;
-                                // padding-top: 12px;
                                 padding-bottom: 12px;
                                 line-height: 55px;
                                 span {
@@ -287,8 +405,26 @@ body {
                                     width: 55px;
                                     height: 55px;
                                     background-image: url(../img/title_cross.png);
-                                    // background-size: cover;
-                                    background-position: center;
+                                    background-position: 0% 0%;
+                                    background-size: cover;
+                                }
+                                @media (max-width: 1200px) {
+                                    font-size: 40px;
+                                    line-height: 40px;
+                                    span{
+                                        width: 40px;
+                                        height: 40px;
+
+                                    }
+                                }
+                                @media (max-width: 700px) {
+                                    font-size: 30px;
+                                    line-height: 30px;
+                                    span{
+                                        width: 30px;
+                                        height: 30px;
+
+                                    }
                                 }
                             }
                             hr {
@@ -333,10 +469,11 @@ body {
                         .align_left {
                             width: calc(100% - 131px);
                             height: 100%;
-                            @media (max-width: 1400px) {
-                                height: 100%;
-                            }
+                            // @media (max-width: 1400px) {
+                            //     height: 100%;
+                            // }
                             p {
+                                text-align: justify;
                                 font-family: "新宋体";
                                 font-size: 18px;
                                 line-height: 28px;
@@ -357,10 +494,58 @@ body {
                                         margin-left: 42px;
                                         margin-right: 42px;
                                         margin-bottom: 0px;
-                                        margin-top: 0;
-                                        padding-top: 20px;
+                                        margin-top: 10px;
+                                        // padding-top: 20px;
                                         padding-bottom: 35px;
                                     }
+                                }
+                            }
+                            @media (max-width: 1200px) {
+                                & {
+                                    p {
+                                        margin-left: 60px;
+                                        margin-top: 40px;
+                                        margin-right: 42px;
+                                        margin-bottom: 0px;
+                                        height: 68%;
+                                    }
+                                }
+                            }
+                            @media (max-width: 700px) {
+                                & {
+                                    width: 100% ;
+                                    p {
+                                        font-size: 12px;
+                                        line-height: 20px;
+                                        margin-top: 40px;
+                                        margin-left: 30px;
+                                        margin-right: 42px;
+                                        height: 63%;
+                                    }
+                                }
+                            }
+                            @media (max-width: 500px) {
+                                & {
+                                    p {
+                                        margin-top: 40px;
+                                        margin-left: 10px;
+                                        margin-right: 10px;
+                                        // height: 58%;
+                                    }
+                                }
+                            }
+                            .btn_more {
+                                display: none;
+                                width: 108px;
+                                height: 26px;
+                                background-color: #000;
+                                color: #fff;
+                                border-radius: 10px;
+                                position: absolute;
+                                right: 10%;
+                                bottom: 2%;
+                                @media (max-width:700px){
+                                    display: block;
                                 }
                             }
                         }
@@ -410,14 +595,19 @@ body {
                         width: 113px;
                     }
                 }
+                @media (max-width: 700px) {
+                    & {
+                        display: none;
+                    }
+                }
             }
         }
     }
-    @media (max-width: 768px) {
-        & {
-            display: none;
-        }
-    }
+    // @media (max-width: 768px) {
+    //     & {
+    //         display: none;
+    //     }
+    // }
 }
 .container_m {
     position: absolute;
@@ -502,34 +692,51 @@ body {
         }
     }
 
-    @media (max-width: 768px) {
-        & {
-            display: block;
-        }
-    }
+    // @media (max-width: 768px) {
+    //     & {
+    //         display: block;
+    //     }
+    // }
 }
-footer {
-    min-width: 220px;
-    font-size: 13.6px;
+footer{
     position: absolute;
     bottom: 0;
-    right: 0;
-    left: 0;
-    line-height: 100px;
-    text-align: center;
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-
-    @media (max-width: 768px) {
-        & {
-            line-height: 94px;
-        }
-    }
-    @media (max-width: 320px) {
-        & {
-            line-height: 53 px;
+    .footer{
+        font-size: 13.6px;
+        font-family: '微軟正黑體';
+        @media (max-width:375px){
+                font-size: 8px;
         }
     }
 }
+// footer {
+//     min-width: 220px;
+//     font-size: 13.6px;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     line-height: 100px;
+//     text-align: center;
+//     z-index: 0;
+
+//     @media (max-width: 768px) {
+//         & {
+//             line-height: 9%;
+//         }
+//     }
+//     @media (max-width: 320px) {
+//         & {
+//             line-height: 53px;
+//         }
+//     }
+// }
 
 // /* 文字區 */
 // .text_block {

@@ -59,48 +59,49 @@
         }
     })
 
-    
+
     // window.setTimeout((begin_event),1000)
 
-    function begin_event(){
+    function begin_event() {
         $('.text_block').removeClass('begin');
         $('.text_block > p').removeClass('begin');
         $('.hardcover_front').addClass('turn');
 
-        
+
         // $('.bookspace').removeClass('begin')
         $('.bookspace').addClass('end')
-        window.setTimeout(function(){$('.bookspace').removeClass('end begin')
-    },2000)
+        window.setTimeout(function () {
+            $('.bookspace').removeClass('end begin')
+        }, 2000)
         current_page++;
-    }    
+    }
 
-    
-    let begin_tab = document.querySelector('.begin_tab') 
-    let page = document.querySelector('.page')    
+
+    let begin_tab = document.querySelector('.begin_tab')
+    let page = document.querySelector('.page')
     // **************下一頁***************
-    document.querySelector('.hardcover_back').addEventListener('click',function(){  
-        console.log(current_page)          
-        
+    document.querySelector('.hardcover_back').addEventListener('click', function () {
+        console.log(current_page)
+
         switch (current_page) {
             case 0:
                 $('.hardcover_front').addClass('turn');
 
                 begin_tab.classList.add('changing')
                 begin_tab.classList.add('hidding')
-                begin_tab.addEventListener('transitionend',page_hidding_end)
-                function page_hidding_end(){
+                begin_tab.addEventListener('transitionend', page_hidding_end)
+                function page_hidding_end() {
                     begin_tab.classList.add('hide')
-                    begin_tab.removeEventListener('transitionend',page_hidding_end)
+                    begin_tab.removeEventListener('transitionend', page_hidding_end)
                     begin_tab.classList.remove('changing')
                 }
                 current_page++;
-                
+
                 break;
             case 1:
                 $('#page1').addClass('turn')
 
-                
+
                 // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page++;
                 // document.getElementById(`text_block${current_page}`).classList.remove('hide')
@@ -127,46 +128,46 @@
             //     $('#page5').addClass('turn')
             //     current_page++;
             //     break;
-        }   
-        
-        console.log(current_page)       
+        }
+
+        console.log(current_page)
     })
     // **************上一頁***************
-    document.querySelector('.hardcover_front').addEventListener('click',function(){
-        console.log(current_page)   
+    document.querySelector('.hardcover_front').addEventListener('click', function () {
+        console.log(current_page)
         switch (current_page) {
             case 1:
                 $('.hardcover_front').removeClass('turn');
 
-                begin_tab.classList.add('changing')                
+                begin_tab.classList.add('changing')
                 begin_tab.classList.remove('hide')
-                window.setTimeout(()=>{begin_tab.classList.remove('hidding')},1)
-                begin_tab.addEventListener('transitionend',page_showing_end)
-                function page_showing_end(){
+                window.setTimeout(() => { begin_tab.classList.remove('hidding') }, 1)
+                begin_tab.addEventListener('transitionend', page_showing_end)
+                function page_showing_end() {
                     begin_tab.classList.remove('changing')
                 }
 
                 current_page--;
 
-                
+
                 break;
             case 2:
-                $('#page1').removeClass('turn')    
+                $('#page1').removeClass('turn')
 
                 current_page--;
-                window.setTimeout(function(){
+                window.setTimeout(function () {
                     // document.getElementById(`text_block${current_page}`).classList.remove('hide')
-                },500)
-                
+                }, 500)
+
                 break;
             case 3:
-                $('#page2').removeClass('turn')            
+                $('#page2').removeClass('turn')
                 // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page--;
                 // document.getElementById(`text_block${current_page}`).classList.remove('hide')
                 break;
             case 4:
-                $('#page3').removeClass('turn')            
+                $('#page3').removeClass('turn')
                 // document.getElementById(`text_block${current_page}`).classList.add('hide')
                 current_page--;
                 // document.getElementById(`text_block${current_page}`).classList.remove('hide')
@@ -181,20 +182,35 @@
             //     $('#page5').removeClass('turn')
             //     current_page--;
             //     break;
-        } 
-        console.log(current_page)  
+        }
+        console.log(current_page)
     })
 
     // 書本大小改變
     resize_book()
     $(window).resize(resize_book);
 
-    function resize_book(){
-        if(document.body.clientWidth > 1400){
+    function resize_book() {
+        if (document.body.clientWidth > 1400) {
             // console.log($('.tab .left_area').width());
-            $(".bookspace").css("width", $('.tab .left_area').width() * 0.422);
-            $(".bookspace").css("height", $('.tab .left_area').width() * 0.422 * 0.738);
+            if ( document.body.clientWidth * 0.292 < 540) {
+                $(".bookspace").css("width", document.body.clientWidth * 0.292);
+                $(".bookspace").css("height", document.body.clientWidth * 0.292 * 0.738);
+            }
+        }else if(document.body.clientWidth > 1200){
+            $(".bookspace").css("width",425)
+            $(".bookspace").css("height",279)
+        }else if(document.body.clientWidth > 768){
+            $(".bookspace").css("width",372)
+            $(".bookspace").css("height",260)
+        }else if(document.body.clientWidth > 500){
+            $(".bookspace").css("width",302)
+            $(".bookspace").css("height",211)
+        }else if(document.body.clientWidth <= 500){
+            $(".bookspace").css("width",171)
+            $(".bookspace").css("height",120)
         }
+
     }
 
     // // *************NAVBAR相關*******************
@@ -214,7 +230,7 @@
     // document.querySelectorAll('.nav ul li').forEach(element =>{
     //     element.addEventListener('click',function(){
     //         document.querySelector('.nav').classList.add('full')
-           
+
     //         document.querySelector('.nav').addEventListener('transitionend',function(e){
     //             // width動畫結束才跳頁
     //             if (e.propertyName === 'width'){
@@ -239,7 +255,7 @@
     //             document.querySelector('.phone_list').classList.add('hide')
     //             document.querySelector('.phone_list').removeEventListener('transitionend',add_hide)
     //         }
-            
+
     //         $('.phone_bar_line').removeClass('close')
     //     }        
     // })
@@ -256,5 +272,5 @@
     //     })
 
     // })
-    
+
 })()
