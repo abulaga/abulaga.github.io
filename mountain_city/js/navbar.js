@@ -21,21 +21,27 @@
 
     // 平板版
     window.setTimeout(() => {
-        if (!$('.phone_list').hasClass('hide')) {
+        if ( !$('.phone_list').hasClass('hide')) {
             // 加長，不然動畫時會露出後面畫面
             document.querySelector('.phone_list').classList.add('longer')
             $('.phone_list').addClass('hidding')
-            document.querySelector('.phone_list').addEventListener('transitionend', add_hide)
 
+            if (document.body.offsetWidth > 768){
+                $('.phone_list').addClass('hide')
+                $('.phone_list').removeClass('longer')
+            }
+ 
+
+            document.querySelector('.phone_list').addEventListener('transitionend', add_hide)
             function add_hide(e) {
                 if (e.propertyName == 'transform') {
                     $('.phone_list').addClass('hide')
                     document.querySelector('.phone_list').removeEventListener('transitionend', add_hide)
                 }
             }
-
             // 移除加長
             document.querySelector('.phone_list').addEventListener('transitionend', remove_longer)
+
         }
     }, 500)
 
@@ -47,12 +53,20 @@
         document.querySelector('.nav').classList.add('open')
         document.querySelector('.ham_bar').classList.add('hide')
         document.querySelector('.nav_back').classList.add('show')
+
+        document.querySelector('.phone_list').classList.remove('hidding')
+        document.querySelector('.phone_list').classList.remove('hide')
+        $('.phone_bar_line').addClass('close')
     })
     // 縮起
     document.querySelector('.nav_back').addEventListener('click', function () {
         document.querySelector('.nav').classList.remove('open')
         document.querySelector('.ham_bar').classList.remove('hide')
         document.querySelector('.nav_back').classList.remove('show')
+        
+        document.querySelector('.phone_list').classList.add('hidding')
+        document.querySelector('.phone_list').classList.add('hide')
+        $('.phone_bar_line').removeClass('close')
     })
 
     document.querySelectorAll('.nav ul li').forEach(element => {
@@ -92,11 +106,12 @@
     document.querySelector('.phone_ham_bar').addEventListener('click', function () {
         if ($('.phone_list').hasClass("hide")) {
             // 加長，不然動畫時會露出後面畫面
-            document.querySelector('.phone_list').classList.add('longer')
             document.querySelector('.phone_list').classList.remove('hide')
+            document.querySelector('.phone_list').classList.add('longer')
+            
             window.setTimeout(function () {
                 document.querySelector('.phone_list').classList.remove('hidding')
-            }, 1)
+            }, 10)
 
             // 移除加長
             document.querySelector('.phone_list').addEventListener('transitionend', remove_longer)
@@ -125,6 +140,7 @@
         document.querySelector('.phone_list').classList.add('hidding')
         document.querySelector('.phone_list').addEventListener('transitionend', add_hide)
         function add_hide(e) {
+            console.log(e)
             if (e.propertyName == 'transform') {
                 document.querySelector('.phone_list').classList.add('hide')
                 document.querySelector('.phone_list').removeEventListener('transitionend', add_hide)
@@ -164,6 +180,7 @@
     // 移除加長
     function remove_longer(e) {
         if (e.propertyName == 'transform') {
+            console.log(e)
             document.querySelector('.phone_list').classList.remove('longer')
             document.querySelector('.phone_list').removeEventListener('transitionend', remove_longer)
         }

@@ -9,7 +9,7 @@
 
 .bookspace .book {
   position: relative;
-  width: calc(504px / 2);
+  width: calc(100% / 2);
   height: 100%;
   -webkit-perspective: 1000px;
           perspective: 1000px;

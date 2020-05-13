@@ -185,6 +185,18 @@
         console.log(current_page)  
     })
 
+    // 書本大小改變
+    resize_book()
+    $(window).resize(resize_book);
+
+    function resize_book(){
+        if(document.body.clientWidth > 1400){
+            // console.log($('.tab .left_area').width());
+            $(".bookspace").css("width", $('.tab .left_area').width() * 0.422);
+            $(".bookspace").css("height", $('.tab .left_area').width() * 0.422 * 0.738);
+        }
+    }
+
     // // *************NAVBAR相關*******************
     // // 展開
     // document.querySelector('.ham_bar').addEventListener('click',function(){

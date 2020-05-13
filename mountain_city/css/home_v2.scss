@@ -1,13 +1,10 @@
 @import "_style-guild.scss";
 @import "_navbar.scss";
 
-
 body {
     width: 100vw;
     overflow: hidden;
 }
-
-
 
 .home {
     width: 100vw;
@@ -20,8 +17,10 @@ body {
     position: absolute;
     left: 60px;
     right: 0;
-    top: 100px;
-    bottom: 100px;
+    // top: 100px;
+    // bottom: 100px;
+    top: 9%;
+    bottom: 9%;
     background-color: $bk_home_container;
 
     /* 左半部 */
@@ -33,10 +32,9 @@ body {
         background-image: url(../img/PC_530x1080-14.png);
         background-repeat: no-repeat;
         background-size: contain;
-        @media (max-width: 1400px){
+        @media (max-width: 1400px) {
             width: 413px;
         }
-      
     }
 
     .right_block {
@@ -47,26 +45,26 @@ body {
         top: 50%;
         transform: translateY(-50%);
 
-
-        @media (max-width:1400px ){
+        @media (max-width: 1400px) {
             width: calc(100% - 413px + 60px - 62px);
             height: 100%;
-            border: solid 1px black;
+            // border: solid 1px black;
         }
         //new書
 
         .align_bookspace {
             // display: none;
-            opacity: 0;
+            // opacity: 0;
 
-            position: absolute; 
+            position: absolute;
             width: 740px;
             top: 29%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
+            // border: 1px black solid;
             &.begin {
-                display: block;               
+                display: block;
 
                 .align_block {
                     width: 470px;
@@ -76,6 +74,7 @@ body {
                     .bookspace {
                         position: absolute;
                         left: -522px;
+                        right: 0;
                     }
                 }
 
@@ -92,6 +91,45 @@ body {
                             position: absolute;
                             left: 50%;
                             transform: translateX(-75%);
+                        }
+                    }
+                }
+            }
+            &.normal {
+                // display: block;
+                width: 64%;
+                transform: translateX(0);
+                left: initial;
+                right: 0;
+                top: 213px;
+
+                .align_block {
+                    width: 0;
+                    position: absolute;
+                    left: 0;
+
+                    .bookspace {
+                        position: absolute;
+                        left: initial;
+                        right: 0;
+                    }
+                }
+
+                @media (max-width: 1400px) {
+                    & {
+                        // width: 100%;
+                        width: 100%;
+                        top: 9%;
+                        display: block;
+                    }
+                    .align_block {
+                        width: 60vw;
+                        height: 100%;
+                        .bookspace {
+                            position: absolute;
+                            left: 50%;
+                            width: 52%;
+                            transform: translateX(-50%);
                         }
                     }
                 }
@@ -192,9 +230,10 @@ body {
             width: 100%;
             height: 100%;
             background-color: #edede5;
-            position: relative;
 
-            @media (max-width:1400px){
+            @media (max-width: 1400px) {
+                height: 44%;
+                top: 52%;
             }
 
             .left_area {
@@ -203,19 +242,27 @@ body {
                 .top_block {
                     width: 100%;
                     height: 213px;
-                    border: black 1px solid;
+
+                    @media (max-width: 1400px) {
+                        height: 82px;
+                    }
                     .title_area {
                         max-width: 902px;
                         width: 100%;
                         height: 144px;
                         padding-top: 37px;
                         margin: 0 auto;
+                        @media (max-width: 1400px) {
+                            position: absolute;
+                            padding-top: 0;
+                            top: -60px;
+                        }
                         .align_center {
                             margin-left: 100px;
                             margin-right: 200px;
 
-                            @media (max-width:1400px){
-                                &{
+                            @media (max-width: 1400px) {
+                                & {
                                     margin-left: 30px;
                                     margin-right: calc(55px + 113px);
                                 }
@@ -230,9 +277,12 @@ body {
                             }
                             .title {
                                 font-size: 55px;
-                                padding-top: 14px;
+                                font-family: "微軟正黑體";
+                                font-weight: bold;
+                                // padding-top: 12px;
                                 padding-bottom: 12px;
-                                span{
+                                line-height: 55px;
+                                span {
                                     display: inline-block;
                                     width: 55px;
                                     height: 55px;
@@ -246,7 +296,9 @@ body {
                                 margin-bottom: 4px;
                             }
                             .sub_title {
-                                font-size: 21px;
+                                padding-top: 10px;
+                                font-family: "新宋体";
+                                font-size: 15px;
                                 text-align: end;
                             }
                         }
@@ -255,25 +307,40 @@ body {
 
                 .bottom_block {
                     height: calc(100% - 213px);
-                    // border: black solid 1px;
+
+                    @media (max-width: 1400px) {
+                        height: calc(100% - 82px);
+                    }
                     .left_side {
                         width: 36%;
                         height: 100%;
-                        background-color: #aaa;
+                        // background-color: #aaa;
                         float: left;
+                        @media (max-width: 1400px) {
+                            width: 0%;
+                        }
                     }
-                    .right_side{
+                    .right_side {
                         width: 64%;
                         height: 100%;
-                        background-color: cadetblue;
+                        // background-color: cadetblue;
                         float: left;
 
-                        .align_left{
+                        @media (max-width: 1400px) {
+                            width: 100%;
+                        }
+
+                        .align_left {
                             width: calc(100% - 131px);
                             height: 100%;
-                            p{  
+                            @media (max-width: 1400px) {
+                                height: 100%;
+                            }
+                            p {
+                                font-family: "新宋体";
+                                font-size: 18px;
+                                line-height: 28px;
                                 height: calc(100% - 12px);
-                                // border: black 1px solid;
                                 margin-left: 48px;
                                 margin-right: 48px;
                                 margin-bottom: 8px;
@@ -282,12 +349,21 @@ body {
                                 padding-left: 4px;
                                 overflow: auto;
                             }
-                            @media (max-width:1400px){
-                                &{
+                            @media (max-width: 1400px) {
+                                & {
                                     width: calc(100% - 113px);
+                                    height: calc(100% - 55px);
+                                    p {
+                                        margin-left: 42px;
+                                        margin-right: 42px;
+                                        margin-bottom: 0px;
+                                        margin-top: 0;
+                                        padding-top: 20px;
+                                        padding-bottom: 35px;
+                                    }
                                 }
                             }
-                        }                        
+                        }
                     }
                 }
             }
@@ -302,17 +378,17 @@ body {
                     width: 5px;
                     height: 100%;
                     background-color: #c6c6c6;
-                    border-radius: 2px;                    
+                    border-radius: 2px;
                 }
 
-                .buttom_area{
+                .buttom_area {
                     width: 39px;
                     height: 55px;
                     position: absolute;
                     left: 50%;
                     bottom: 38px;
                     transform: translateX(-50%);
-                    
+
                     .more_icon {
                         width: 39px;
                         height: 31px;
@@ -326,11 +402,11 @@ body {
                         width: 100%;
                         text-align: center;
                         padding-bottom: 3px;
-                        border-bottom: 1px solid #000;
+                        // border-bottom: 1px solid #000;
                     }
                 }
-                @media (max-width:1400px){
-                    &{
+                @media (max-width: 1400px) {
+                    & {
                         width: 113px;
                     }
                 }

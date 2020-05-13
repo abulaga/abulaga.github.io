@@ -231,7 +231,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 100;
   /* 手機板漢堡條 */
   /* 手機板NAV列表 */
 }
@@ -314,6 +313,7 @@
           transition-duration: 1s;
   -webkit-transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
           transition-timing-function: cubic-bezier(0.35, -0.31, 0.63, 1.3);
+  z-index: 100;
 }
 
 .phone_nav .phone_list.hide {
@@ -537,8 +537,8 @@ body {
   position: absolute;
   left: 60px;
   right: 0;
-  top: 100px;
-  bottom: 100px;
+  top: 9%;
+  bottom: 9%;
   background-color: #fff;
   /* 左半部 */
 }
@@ -574,12 +574,10 @@ body {
   .container_pc .right_block {
     width: calc(100% - 413px + 60px - 62px);
     height: 100%;
-    border: solid 1px black;
   }
 }
 
 .container_pc .right_block .align_bookspace {
-  opacity: 0;
   position: absolute;
   width: 740px;
   top: 29%;
@@ -602,6 +600,7 @@ body {
 .container_pc .right_block .align_bookspace.begin .align_block .bookspace {
   position: absolute;
   left: -522px;
+  right: 0;
 }
 
 @media (max-width: 1400px) {
@@ -619,6 +618,46 @@ body {
     left: 50%;
     -webkit-transform: translateX(-75%);
             transform: translateX(-75%);
+  }
+}
+
+.container_pc .right_block .align_bookspace.normal {
+  width: 64%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  left: initial;
+  right: 0;
+  top: 213px;
+}
+
+.container_pc .right_block .align_bookspace.normal .align_block {
+  width: 0;
+  position: absolute;
+  left: 0;
+}
+
+.container_pc .right_block .align_bookspace.normal .align_block .bookspace {
+  position: absolute;
+  left: initial;
+  right: 0;
+}
+
+@media (max-width: 1400px) {
+  .container_pc .right_block .align_bookspace.normal {
+    width: 100%;
+    top: 9%;
+    display: block;
+  }
+  .container_pc .right_block .align_bookspace.normal .align_block {
+    width: 60vw;
+    height: 100%;
+  }
+  .container_pc .right_block .align_bookspace.normal .align_block .bookspace {
+    position: absolute;
+    left: 50%;
+    width: 52%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -731,7 +770,13 @@ body {
   width: 100%;
   height: 100%;
   background-color: #edede5;
-  position: relative;
+}
+
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his {
+    height: 44%;
+    top: 52%;
+  }
 }
 
 .container_pc .right_block .tab_his .left_area {
@@ -741,7 +786,12 @@ body {
 .container_pc .right_block .tab_his .left_area .top_block {
   width: 100%;
   height: 213px;
-  border: black 1px solid;
+}
+
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his .left_area .top_block {
+    height: 82px;
+  }
 }
 
 .container_pc .right_block .tab_his .left_area .top_block .title_area {
@@ -750,6 +800,14 @@ body {
   height: 144px;
   padding-top: 37px;
   margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his .left_area .top_block .title_area {
+    position: absolute;
+    padding-top: 0;
+    top: -60px;
+  }
 }
 
 .container_pc .right_block .tab_his .left_area .top_block .title_area .align_center {
@@ -774,8 +832,10 @@ body {
 
 .container_pc .right_block .tab_his .left_area .top_block .title_area .align_center .title {
   font-size: 55px;
-  padding-top: 14px;
+  font-family: "微軟正黑體";
+  font-weight: bold;
   padding-bottom: 12px;
+  line-height: 55px;
 }
 
 .container_pc .right_block .tab_his .left_area .top_block .title_area .align_center .title span {
@@ -792,7 +852,9 @@ body {
 }
 
 .container_pc .right_block .tab_his .left_area .top_block .title_area .align_center .sub_title {
-  font-size: 21px;
+  padding-top: 10px;
+  font-family: "新宋体";
+  font-size: 15px;
   text-align: end;
 }
 
@@ -800,18 +862,34 @@ body {
   height: calc(100% - 213px);
 }
 
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his .left_area .bottom_block {
+    height: calc(100% - 82px);
+  }
+}
+
 .container_pc .right_block .tab_his .left_area .bottom_block .left_side {
   width: 36%;
   height: 100%;
-  background-color: #aaa;
   float: left;
+}
+
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his .left_area .bottom_block .left_side {
+    width: 0%;
+  }
 }
 
 .container_pc .right_block .tab_his .left_area .bottom_block .right_side {
   width: 64%;
   height: 100%;
-  background-color: cadetblue;
   float: left;
+}
+
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his .left_area .bottom_block .right_side {
+    width: 100%;
+  }
 }
 
 .container_pc .right_block .tab_his .left_area .bottom_block .right_side .align_left {
@@ -819,7 +897,16 @@ body {
   height: 100%;
 }
 
+@media (max-width: 1400px) {
+  .container_pc .right_block .tab_his .left_area .bottom_block .right_side .align_left {
+    height: 100%;
+  }
+}
+
 .container_pc .right_block .tab_his .left_area .bottom_block .right_side .align_left p {
+  font-family: "新宋体";
+  font-size: 18px;
+  line-height: 28px;
   height: calc(100% - 12px);
   margin-left: 48px;
   margin-right: 48px;
@@ -833,6 +920,15 @@ body {
 @media (max-width: 1400px) {
   .container_pc .right_block .tab_his .left_area .bottom_block .right_side .align_left {
     width: calc(100% - 113px);
+    height: calc(100% - 55px);
+  }
+  .container_pc .right_block .tab_his .left_area .bottom_block .right_side .align_left p {
+    margin-left: 42px;
+    margin-right: 42px;
+    margin-bottom: 0px;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 35px;
   }
 }
 
@@ -875,7 +971,6 @@ body {
   width: 100%;
   text-align: center;
   padding-bottom: 3px;
-  border-bottom: 1px solid #000;
 }
 
 @media (max-width: 1400px) {
