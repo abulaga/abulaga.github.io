@@ -83,7 +83,7 @@
 }
 
 .hardcover_front li:last-child .back {
-	background-image: url(../img/翻頁-照片.jpg);
+	background-image: url(../img/home/介紹山城-封面.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -94,7 +94,7 @@
 	right: 0;
 }
 .hardcover_back li:last-child .front {
-	background-image: url(../img/ad.jpg);
+	background-image: url();
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -155,43 +155,43 @@
 	position: absolute;
 }
 .page li:nth-child(5) .front{
-	background-image: url(../img/翻頁-內文.jpg);
+	background-image: url(../img/home/介紹山城-內文.jpg);
 	backface-visibility: hidden;
 }
 .page li:nth-child(5) .back{
-	background-image: url(../img/未命名-1_2_L.jpg);
+	background-image: url(../img/home/02-漫遊-封面.jpg);
 	transform: rotateY(180deg);
 }
 .page li:nth-child(4) .front{
-	background-image: url(../img/未命名-1_2_R.jpg);
+	background-image: url(../img/home/02-漫遊-內文.jpg);
 	backface-visibility: hidden;
 }
 .page li:nth-child(4) .back{
-	background-image: url(../img/未命名-1_3_L.jpg);
+	background-image: url(../img/home/01-慢活-封面.jpg);
 	transform: rotateY(180deg);
 }
 .page li:nth-child(3) .front{
-	background-image: url(../img/未命名-1_3_R.jpg);
+	background-image: url(../img/home/01-慢活-內文.jpg);
 	backface-visibility: hidden;
 }
 .page li:nth-child(3) .back{
-	background-image: url(../img/未命名-1_4_L.jpg);
+	background-image: url(../img/home/03-漫食-封面-01.jpg);
 	transform: rotateY(180deg);
 }
 .page li:nth-child(2) .front{
-	background-image: url(../img/未命名-1_4_R.jpg);
+	background-image: url(../img/home/03-漫食-內文.jpg);
 	backface-visibility: hidden;
 }
 .page li:nth-child(2) .back{
-	background-image: url(../img/未命名-1-02.jpg);
+	background-image: url();
 	transform: rotateY(180deg);
 }
 .page li:nth-child(1) .front{
-	background-image: url(../img/未命名-1-03.jpg);
+	background-image: url();
 	backface-visibility: hidden;
 }
 .page li:nth-child(1) .back{
-	background-image: url(../img/圖2-02.jpg);
+	background-image: url();
 	transform: rotateY(180deg);
 }
 
