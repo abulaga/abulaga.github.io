@@ -25,4 +25,4 @@
 // }
 console.log('window' + $(window).height())
 console.log( $('.gap .gap2').offset().top)
-console.log($('.section3 .gap .gap2').offset().top)
+console.log($('#section3 .gap .gap2').offset().top)
