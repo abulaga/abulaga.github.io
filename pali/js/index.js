@@ -23,6 +23,62 @@
 //     // document.querySelector('.gap .gap2').style.transform = ''
 //     // lax_setup() 
 // }
-console.log('window' + $(window).height())
-console.log( $('.gap .gap2').offset().top)
-console.log($('#section3 .gap .gap2').offset().top)
+// console.log('window' + $(window).height())
+// console.log( $('.gap .gap2').offset().top)
+// console.log($('#section3 .gap .gap2').offset().top)
+
+(function () {
+
+    // NEWS換頁
+    var page_btns = $('#section5 .pagination_area li')
+    var news_pages = $('#section5 .news_area .page')
+    var current_news_page = 1
+    console.log(news_pages)
+    page_btns.click(function () {
+        switch (this.dataset.btn) {
+            case 'pre':
+                if (current_news_page == 1) {
+                    break;
+                } else {
+                    current_news_page--
+                    page_btns.removeClass('now')
+                    $(`#section5 .pagination_area li:nth-of-type(${current_news_page + 1})`).addClass('now')
+                    news_pages.removeClass('now')
+                    $(`#section5 .news_area .page${current_news_page}`).addClass('now')
+                }
+                break;
+            case '1':
+                page_btns.removeClass('now')
+                $('#section5 .pagination_area li:nth-of-type(2)').addClass('now')
+                news_pages.removeClass('now')
+                $('#section5 .news_area .page1').addClass('now')
+                current_news_page = 1
+                break;
+            case '2':
+                page_btns.removeClass('now')
+                $('#section5 .pagination_area li:nth-of-type(3)').addClass('now')
+                news_pages.removeClass('now')
+                $('#section5 .news_area .page2').addClass('now')
+                current_news_page = 2
+                break;
+            case '3':
+                page_btns.removeClass('now')
+                $('#section5 .pagination_area li:nth-of-type(4)').addClass('now')
+                news_pages.removeClass('now')
+                $('#section5 .news_area .page3').addClass('now')
+                current_news_page = 3
+                break;
+            case 'next':
+                if (current_news_page == 3) {
+                    break;
+                } else {
+                    current_news_page++
+                    page_btns.removeClass('now')
+                    $(`#section5 .pagination_area li:nth-of-type(${current_news_page + 1})`).addClass('now')
+                    news_pages.removeClass('now')
+                    $(`#section5 .news_area .page${current_news_page}`).addClass('now')
+                }
+                break;
+        }
+    })
+})()
