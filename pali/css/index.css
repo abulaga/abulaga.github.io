@@ -844,6 +844,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid transparent;
   border-width: 0 2px 0 0;
   -o-border-image: linear-gradient(180deg, #843120 50%, transparent 100%);
@@ -853,16 +857,17 @@ body {
 }
 
 #section3 .time_area .block1 .hidden .content_area .pic {
-  width: 60%;
+  width: 100%;
 }
 
 #section3 .time_area .block1 .hidden .content_area .pic img {
   width: 100%;
   vertical-align: middle;
+  margin: 10px 0;
 }
 
 #section3 .time_area .block1 .hidden .content_area .text {
-  width: 40%;
+  width: 100%;
   vertical-align: middle;
   padding-left: 20px;
   text-align: justify;
@@ -935,6 +940,7 @@ body {
 #section3 .time_area .block2 .hidden .content_area .pic img {
   width: 100%;
   vertical-align: middle;
+  margin: 10px 0;
 }
 
 #section3 .time_area .block2 .hidden .content_area .text {
@@ -946,7 +952,7 @@ body {
 #section3 .time_area .block3 {
   position: absolute;
   right: 0;
-  top: 500px;
+  top: 600px;
   width: 100%;
   max-width: 50%;
   overflow: hidden;
@@ -1011,6 +1017,7 @@ body {
 #section3 .time_area .block3 .hidden .content_area .pic img {
   width: 100%;
   vertical-align: middle;
+  margin: 10px 0;
 }
 
 #section3 .time_area .block3 .hidden .content_area .text {
@@ -1062,6 +1069,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1076,16 +1087,17 @@ body {
 }
 
 #section3 .time_area .block4 .content_area .pic {
-  width: 60%;
+  width: 100%;
 }
 
 #section3 .time_area .block4 .content_area .pic img {
   width: 100%;
   vertical-align: middle;
+  margin: 10px 0;
 }
 
 #section3 .time_area .block4 .content_area .text {
-  width: 40%;
+  width: 100%;
   padding-left: 20px;
   vertical-align: middle;
   text-align: justify;
@@ -1819,9 +1831,61 @@ body {
   color: white;
 }
 
+#section5 #news_modal .modal-header {
+  border-bottom: unset;
+}
+
+#section5 #news_modal .pic_block {
+  width: 100%;
+  height: 40vh;
+}
+
+#section5 #news_modal .pic_block img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#section5 #news_modal .content_block {
+  margin: auto;
+  display: inline-block;
+  height: 100%;
+  font-size: initial;
+  vertical-align: top;
+  color: black;
+  position: relative;
+  padding-left: 20px;
+}
+
+#section5 #news_modal .content_block .news_type_container {
+  width: 100%;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#section5 #news_modal .content_block .news_type_container .type {
+  border: 1px solid black;
+  line-height: 31px;
+  padding: 0 10px;
+  background-color: #e9cda2;
+  margin-right: 10px;
+}
+
+#section5 #news_modal .content_block .title_container {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+#section5 #news_modal .content_block .content_container {
+  position: relative;
+  line-height: 1.5em;
+  height: 7.5em;
+  overflow: hidden;
+}
+
 #section7 {
   width: 100%;
-  height: 2000px;
   position: relative;
 }
 
@@ -2024,6 +2088,7 @@ body {
 }
 
 #section7 .container.content_area .row .info_block .title {
+  font-weight: bold;
   font-size: 28px;
   margin-bottom: 40px;
 }
@@ -2064,6 +2129,8 @@ body {
 }
 
 #section7 .container.content_area .row .form_block > .title {
+  padding-left: 20px;
+  font-weight: bold;
   font-size: 28px;
   margin-bottom: 40px;
 }
@@ -2081,6 +2148,10 @@ body {
   padding-right: 20px;
 }
 
+#section7 .container.content_area .row .form_block .form_area > * {
+  margin: 5px 0;
+}
+
 #section7 .container.content_area .row .form_block .form_area > * .title {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -2088,11 +2159,13 @@ body {
 
 #section7 .container.content_area .row .form_block .form_area > * input {
   width: 100%;
+  height: 2em;
   border: 1px solid #843120;
 }
 
 #section7 .container.content_area .row .form_block .form_area > * textarea {
   width: 100%;
+  border: 1px solid #843120;
 }
 
 #section7 .container.content_area .row .form_block .form_area .name {
@@ -2129,6 +2202,61 @@ body {
 #section7 .container.content_area .row .form_block .form_area .btn_area button {
   width: 100px;
   height: 30px;
+  border: 1px solid black;
+}
+
+#section7 .container.content_area .row .form_block .form_area .btn_area button:hover {
+  background-color: #843120;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  #section7 .container.content_area .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #section7 .container.content_area .row .info_block {
+    margin-top: 20px;
+  }
+  #section7 .container.content_area .row .info_block > .title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #section7 .container.content_area .row .form_block > .title {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  #section7 .container.content_area .row .form_block .form_area .name {
+    width: 100%;
+  }
+  #section7 .container.content_area .row .form_block .form_area .tel {
+    width: 100%;
+  }
+  #section7 .container.content_area .row .form_block .form_area .phone {
+    width: 100%;
+  }
+  #section7 .container.content_area .row .form_block .form_area .email {
+    width: 100%;
+  }
+  #section7 .container.content_area .row .form_block .form_area .btn_area {
+    margin-top: 15px;
+  }
+  #section7 .container.content_area .row .form_block .form_area .btn_area button {
+    width: 100%;
+  }
+}
+
+#section7 .map {
+  margin-top: 40px;
+  width: 100%;
+  height: 500px;
+}
+
+#section7 .map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 footer {

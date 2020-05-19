@@ -81,4 +81,21 @@
                 break;
         }
     })
+
+
+    var btn_num
+    $('#section5 .btn_container').click(function(){
+        // console.log(this.dataset.btn_num)
+        btn_num = this.dataset.btn_num
+    })
+    $('#news_modal').on('show.bs.modal', function () {
+        console.log(btn_num)
+        $(this).find('.news_type').text( document.querySelector(`#section5 .${btn_num} .type`).innerText)
+        console.log(document.querySelector(`#section5 .${btn_num} .type`).innerText)
+    })
+
+    //意見送出按鈕
+    $('#suggest_submit').click(function(){
+        alert('感謝您提供的寶貴意見\n'  + '我們將會盡快回復')
+    })
 })()
