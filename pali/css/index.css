@@ -910,7 +910,6 @@ body {
   height: 2px;
   width: calc(100% + 50px);
   background-color: #843120;
-  margin-left: -50px;
 }
 
 #section3 .time_area .block2 .hidden .content_area {
@@ -1107,9 +1106,9 @@ body {
 #section3 .time_area .line {
   position: absolute;
   height: 100%;
-  width: 1px;
-  left: 0%;
+  left: 50%;
   top: -100%;
+  width: 2px;
   background-color: #843120;
 }
 
@@ -1124,13 +1123,14 @@ body {
 
 @media (max-width: 768px) {
   #section3 .time_area {
-    height: 2200px;
+    height: 2400px;
   }
   #section3 .time_area .block1 {
     max-width: 100%;
+    left: 15px;
   }
   #section3 .time_area .block1 .hidden {
-    margin-left: 15px;
+    padding: 20px 20px 20px 25px;
   }
   #section3 .time_area .block1 .hidden .title_area {
     border-width: 0 2px 0 0;
@@ -1138,25 +1138,43 @@ body {
   #section3 .time_area .block1 .hidden .content_area {
     border-width: 0 2px 0 0;
   }
+  #section3 .time_area .block1 .hidden .content_area .text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   #section3 .time_area .block2 {
     max-width: 100%;
-    top: 550px;
+    top: 600px;
+    left: 15px;
   }
   #section3 .time_area .block2 .hidden {
-    margin-left: 15px;
+    padding: 20px 20px 20px 25px;
   }
   #section3 .time_area .block2 .hidden .title_area {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    text-align: right;
     border-width: 0 2px 0 0;
   }
+  #section3 .time_area .block2 .hidden .h_line {
+    margin-left: -50px;
+  }
   #section3 .time_area .block2 .hidden .content_area {
+    padding: 15px 15px 0 0;
     border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block2 .hidden .content_area .text {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   #section3 .time_area .block3 {
     max-width: 100%;
-    top: 1100px;
+    top: 1200px;
+    left: 15px;
   }
   #section3 .time_area .block3 .hidden {
-    margin-left: 15px;
+    padding: 20px 20px 20px 25px;
   }
   #section3 .time_area .block3 .hidden .title_area {
     border-width: 0 2px 0 0;
@@ -1164,18 +1182,35 @@ body {
   #section3 .time_area .block3 .hidden .content_area {
     border-width: 0 2px 0 0;
   }
+  #section3 .time_area .block3 .hidden .content_area .text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   #section3 .time_area .block4 {
     max-width: 100%;
-    top: 1650px;
+    top: 1800px;
+    left: 15px;
   }
   #section3 .time_area .block4 .hidden {
-    margin-left: 15px;
+    padding: 20px 20px 20px 25px;
   }
   #section3 .time_area .block4 .hidden .title_area {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    text-align: right;
     border-width: 0 2px 0 0;
   }
+  #section3 .time_area .block4 .hidden .h_line {
+    margin-left: -50px;
+  }
   #section3 .time_area .block4 .hidden .content_area {
+    padding: 15px 15px 0 0;
     border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block4 .hidden .content_area .text {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   #section3 .time_area .line {
     left: 15px;
