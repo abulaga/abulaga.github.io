@@ -3,7 +3,7 @@
     width: 62px;
     height: 100%;
     background-color: $bk_nav;
-    background-image: url("../img/background.png");
+    background-image: url("../img/navbar/background.png");
     background-size: cover;
     background-position: left;
     right: 0;
@@ -40,7 +40,7 @@
             height: 155px;
             position: absolute;
             top: 80px;
-            right: 230px;
+            left: calc(100vw - 730px);
             color: #fff;
 
             @media (max-width: 1200px) {
@@ -107,7 +107,7 @@
             }
         }
         &.start {
-            width: 100%;
+            width: 105%;
         }
     }
 
