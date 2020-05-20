@@ -910,6 +910,7 @@ body {
   height: 2px;
   width: calc(100% + 50px);
   background-color: #843120;
+  margin-left: -50px;
 }
 
 #section3 .time_area .block2 .hidden .content_area {
@@ -1107,7 +1108,7 @@ body {
   position: absolute;
   height: 100%;
   width: 1px;
-  left: 50%;
+  left: 0%;
   top: -100%;
   background-color: #843120;
 }
@@ -1119,6 +1120,69 @@ body {
   background-color: #843120;
   border-radius: 50%;
   left: calc(50% - 15px);
+}
+
+@media (max-width: 768px) {
+  #section3 .time_area {
+    height: 2200px;
+  }
+  #section3 .time_area .block1 {
+    max-width: 100%;
+  }
+  #section3 .time_area .block1 .hidden {
+    margin-left: 15px;
+  }
+  #section3 .time_area .block1 .hidden .title_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block1 .hidden .content_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block2 {
+    max-width: 100%;
+    top: 550px;
+  }
+  #section3 .time_area .block2 .hidden {
+    margin-left: 15px;
+  }
+  #section3 .time_area .block2 .hidden .title_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block2 .hidden .content_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block3 {
+    max-width: 100%;
+    top: 1100px;
+  }
+  #section3 .time_area .block3 .hidden {
+    margin-left: 15px;
+  }
+  #section3 .time_area .block3 .hidden .title_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block3 .hidden .content_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block4 {
+    max-width: 100%;
+    top: 1650px;
+  }
+  #section3 .time_area .block4 .hidden {
+    margin-left: 15px;
+  }
+  #section3 .time_area .block4 .hidden .title_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .block4 .hidden .content_area {
+    border-width: 0 2px 0 0;
+  }
+  #section3 .time_area .line {
+    left: 15px;
+  }
+  #section3 .time_area .ball {
+    left: 0;
+  }
 }
 
 #section4 {
@@ -2093,7 +2157,9 @@ body {
   margin-bottom: 40px;
 }
 
-#section7 .container.content_area .row .info_block .open_time, #section7 .container.content_area .row .info_block .phone, #section7 .container.content_area .row .info_block .address {
+#section7 .container.content_area .row .info_block .open_time,
+#section7 .container.content_area .row .info_block .phone,
+#section7 .container.content_area .row .info_block .address {
   margin-bottom: 25px;
 }
 
@@ -2262,7 +2328,7 @@ body {
 footer {
   width: 100%;
   height: 50px;
-  background-color: #C9935A;
+  background-color: #c9935a;
   line-height: 50px;
   text-align: center;
   color: #843120;
