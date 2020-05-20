@@ -792,7 +792,7 @@ body {
 #section3 .time_area {
   top: 50px;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   width: 100%;
   height: 1300px;
   margin: auto;
