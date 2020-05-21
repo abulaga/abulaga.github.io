@@ -340,12 +340,11 @@
 /* 手機板NAV */
 .phone_nav {
   width: 100vw;
+  height: 100vh;
   display: none;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
-  z-index: 100;
-  padding: 15px 0;
   /* 手機板漢堡條 */
   /* 手機板NAV列表 */
 }
@@ -359,18 +358,22 @@
 .phone_nav .phone_ham_bar {
   width: 30px;
   height: 30px;
-  padding-right: 20px;
-  position: relative;
+  position: absolute;
   z-index: 101;
-  margin-left: auto;
+  top: 20px;
+  right: 30px;
 }
 
 .phone_nav .phone_ham_bar .phone_bar_line {
-  width: 100%;
+  width: 30px;
   height: 5px;
-  margin-bottom: 5px;
   background-color: #fff;
+  position: absolute;
   border-radius: 3px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
@@ -414,7 +417,7 @@
   right: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url(../img/navbar/background.png);
   background-color: #3E3A39;
   background-size: cover;
