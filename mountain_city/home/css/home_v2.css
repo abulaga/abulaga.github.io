@@ -1,9 +1,4 @@
 @charset "UTF-8";
-body {
-  -webkit-transform: translateY(60px);
-          transform: translateY(60px);
-}
-
 .nav {
   position: absolute;
   width: 62px;
