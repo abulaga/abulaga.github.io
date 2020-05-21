@@ -11,11 +11,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/97-1.main.css">
+  <link rel="stylesheet" href="./css/98-1.main.css">
   <!-- 第三層 -->
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
   <link rel="stylesheet" href="./css/style.css" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167181261-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167181261-1');
+</script>
 </head>
 
 <body>
@@ -67,7 +77,7 @@
     <div class="item-bg"></div>
     <div class="news-slider">
       <div class="news-slider__wrp swiper-wrapper">
-        <div class="news-slider__item swiper-slide third_content">
+        <div class="news-slider__item swiper-slide third_content all_content">
           <a href="#" class="news__item">
             <div class="news__title">
               石岡-石山丘的三十光陰
@@ -83,7 +93,7 @@
           </a>
         </div>
 
-        <div class="news-slider__item swiper-slide third_content">
+        <div class="news-slider__item swiper-slide third_content all_content">
           <a href="#" class="news__item">
 
             <div class="news__title">
@@ -106,7 +116,7 @@
           </a>
         </div>
 
-        <div class="news-slider__item swiper-slide third_content">
+        <div class="news-slider__item swiper-slide third_content all_content">
           <a href="#" class="news__item">
 
             <div class="news__title">
@@ -127,7 +137,7 @@
           </a>
         </div>
 
-        <div class="news-slider__item swiper-slide third_content">
+        <div class="news-slider__item swiper-slide third_content all_content">
           <a href="#" class="news__item">
 
             <div class="news__title">
@@ -145,7 +155,7 @@
           </a>
         </div>
 
-        <div class="news-slider__item swiper-slide third_content">
+        <div class="news-slider__item swiper-slide third_content all_content">
           <a href="#" class="news__item">
 
             <div class="news__title">
@@ -168,7 +178,7 @@
           </a>
         </div>
 
-        <div class="news-slider__item swiper-slide third_content">
+        <div class="news-slider__item swiper-slide third_content all_content">
           <a href="#" class="news__item">
             <div class="news__title">
               豐原排骨麵
@@ -822,10 +832,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="../home/js/navbar.js"></script>
   <script src="./js/swiper3.js"></script>
-  <script>
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    });
-  </script>
+  <script src="./js/third-floor.js"></script>
 </body>
 </html>

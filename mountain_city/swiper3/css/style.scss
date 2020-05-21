@@ -67,7 +67,6 @@ a, a:hover {
 }
 
 .news {
-
   &-slider {
     z-index: 2;
     max-width: 1300px;
@@ -80,6 +79,10 @@ a, a:hover {
 
     @media screen and (max-width: 576px) {
       margin-top: 45px;
+    }
+
+    @media screen and (max-height: 850px) {
+
     }
 
     &__wrp {
