@@ -1,5 +1,8 @@
 @import "_style-guild";
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
     margin: 0;
@@ -47,6 +50,7 @@ body {
                         position: relative;
                         a {
                             color: $text_color;
+                            text-decoration: none;
                             .item {
                                 font-weight: bold;
                             }

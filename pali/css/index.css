@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
@@ -64,6 +68,7 @@ body {
 
 #section1 nav .row.nav_list > * ul li a {
   color: #843120;
+  text-decoration: none;
 }
 
 #section1 nav .row.nav_list > * ul li a .item {
