@@ -45,37 +45,40 @@ body {
                         height: 43px;
                         text-align: center;
                         position: relative;
-                        .item {
-                            font-weight: bold;
-                        }
-
-                        .item {
-                            font-size: 12px;
-                        }
-                        .sub_item {
-                            font-size: 8px;
-                        }
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            bottom: -5px;
-                            left: 50%;
-                            right: 50%;
-                            border-bottom: 2px $text_color solid;
-                            transition-duration: 0.5s;
-                        }
-                        &:hover::before {
-                            left: -5%;
-                            right: -5%;
-                        }
-
-                        @media (min-width: 768px) {
+                        a {
+                            color: $text_color;
                             .item {
-                                font-size: 16px;
+                                font-weight: bold;
+                            }
+
+                            .item {
+                                font-size: 12px;
                             }
                             .sub_item {
-                                font-size: 12px;
+                                font-size: 8px;
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                bottom: -5px;
+                                left: 50%;
+                                right: 50%;
+                                border-bottom: 2px $text_color solid;
+                                transition-duration: 0.5s;
+                            }
+                            &:hover::before {
+                                left: -5%;
+                                right: -5%;
+                            }
+
+                            @media (min-width: 768px) {
+                                .item {
+                                    font-size: 16px;
+                                }
+                                .sub_item {
+                                    font-size: 12px;
+                                }
                             }
                         }
                     }
