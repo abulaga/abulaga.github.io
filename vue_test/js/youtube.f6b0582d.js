@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["youtube"],{bc09:function(e,t,n){"use strict";n.r(t);var u=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[e._v("This is Youttube")])},s=[],c=n("2877"),i={},l=Object(c["a"])(i,u,s,!1,null,null,null);t["default"]=l.exports}}]);
+//# sourceMappingURL=youtube.f6b0582d.js.map
