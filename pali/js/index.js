@@ -33,7 +33,7 @@
     var page_btns = $('#section5 .pagination_area li')
     var news_pages = $('#section5 .news_area .page')
     var current_news_page = 1
-    console.log(news_pages)
+    // console.log(news_pages)
     page_btns.click(function () {
         switch (this.dataset.btn) {
             case 'pre':
@@ -89,9 +89,14 @@
         btn_num = this.dataset.btn_num
     })
     $('#news_modal').on('show.bs.modal', function () {
-        console.log(btn_num)
-        $(this).find('.news_type').text( document.querySelector(`#section5 .${btn_num} .type`).innerText)
-        console.log(document.querySelector(`#section5 .${btn_num} .type`).innerText)
+        // console.log($(`#section5 .${btn_num}`).prev().css('background-image').split('"'))
+        // console.log($(this).find('img'))
+        $(this).find('img').attr('src',$(`#section5 .${btn_num}`).prev().css('background-image').split('"')[1])
+        $(this).find('.type').text( document.querySelector(`#section5 .${btn_num} .type`).innerText)
+        $(this).find('.date').text( document.querySelector(`#section5 .${btn_num} .date`).innerText)
+        $(this).find('.title_container').text( document.querySelector(`#section5 .${btn_num} .title_container`).innerText)
+        $(this).find('.content_container').text( document.querySelector(`#section5 .${btn_num} .content_container`).innerText)
+        // console.log(document.querySelector(`#section5 .${btn_num} .type`).innerText)
     })
 
     //意見送出按鈕
