@@ -1,9 +1,0 @@
-[
-  { "num": 1, "type": "a", "title": "apple" },
-  { "num": 2, "type": "a", "title": "abc" },
-  { "num": 3, "type": "a", "title": "aaaaa" },
-  { "num": 4, "type": "b", "title": "bird" },
-  { "num": 5, "type": "b", "title": "bbb" },
-  { "num": 6, "type": "c", "title": "ccc" },
-  { "num": 7, "type": "c", "title": "card" }
-]
