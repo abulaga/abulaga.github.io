@@ -1,11 +1,11 @@
-// function resize_event(){
+// function resize_event() {
 //     // console.log("123")
 //     // console.log(document.querySelector('.gap .gap2').dataset.laxTranslateY)
 //     // console.log(document.querySelector('.gap .gap2').offsetHeight)
 //     // console.log($('.gap .gap2').style)
 
 //     let div_y = $('.gap .gap2').offset().top
-//     let div_hieght =document.querySelector('.gap .gap2').offsetHeight
+//     let div_hieght = document.querySelector('.gap .gap2').offsetHeight
 //     let scrollY = window.scrollY
 //     let window_n = $(window).height()
 //     console.log(document.querySelector('.gap .gap2').style.transform)
@@ -13,18 +13,18 @@
 //     // console.log('div_y:' + div_y)
 //     // console.log('height' +  $(window).height())
 //     // console.log( window.screenTop)
-//     let test =  `0 -${div_hieght *1 }, ${div_hieght + div_y - scrollY } -${div_hieght *1 },  ${div_hieght + div_y - scrollY +window_n} -${div_hieght *1 }`
-//    console.log('test' + test)
-//     document.querySelector('.gap .gap2').dataset.laxTranslateY = 
-//     `0 -${div_hieght *1 }, ${div_hieght + div_y - scrollY } -${div_hieght *1 },  ${div_hieght + div_y - scrollY +window_n} -${div_hieght *1 }`
+//     let test = `0 -${div_hieght * 1}, ${div_hieght + div_y - scrollY} -${div_hieght * 1},  ${div_hieght + div_y - scrollY + window_n} -${div_hieght * 1}`
+//     console.log('test' + test)
+//     document.querySelector('.gap .gap2').dataset.laxTranslateY =
+//         `0 -${div_hieght * 1}, ${div_hieght + div_y - scrollY} -${div_hieght * 1},  ${div_hieght + div_y - scrollY + window_n} -${div_hieght * 1}`
 //     // getInfo()
-//     console.log( document.querySelector('.gap .gap2').dataset.laxTranslateY)
+//     console.log(document.querySelector('.gap .gap2').dataset.laxTranslateY)
 //     // offsetLeft
 //     // document.querySelector('.gap .gap2').style.transform = ''
 //     // lax_setup() 
 // }
 // console.log('window' + $(window).height())
-// console.log( $('.gap .gap2').offset().top)
+// console.log($('.gap .gap2').offset().top)
 // console.log($('#section3 .gap .gap2').offset().top)
 
 (function () {
@@ -84,23 +84,23 @@
 
 
     var btn_num
-    $('#section5 .btn_container').click(function(){
+    $('#section5 .btn_container').click(function () {
         // console.log(this.dataset.btn_num)
         btn_num = this.dataset.btn_num
     })
     $('#news_modal').on('show.bs.modal', function () {
         // console.log($(`#section5 .${btn_num}`).prev().css('background-image').split('"'))
         // console.log($(this).find('img'))
-        $(this).find('img').attr('src',$(`#section5 .${btn_num}`).prev().css('background-image').split('"')[1])
-        $(this).find('.type').text( document.querySelector(`#section5 .${btn_num} .type`).innerText)
-        $(this).find('.date').text( document.querySelector(`#section5 .${btn_num} .date`).innerText)
-        $(this).find('.title_container').text( document.querySelector(`#section5 .${btn_num} .title_container`).innerText)
-        $(this).find('.content_container').text( document.querySelector(`#section5 .${btn_num} .content_container`).innerText)
+        $(this).find('img').attr('src', $(`#section5 .${btn_num}`).prev().css('background-image').split('"')[1])
+        $(this).find('.type').text(document.querySelector(`#section5 .${btn_num} .type`).innerText)
+        $(this).find('.date').text(document.querySelector(`#section5 .${btn_num} .date`).innerText)
+        $(this).find('.title_container').text(document.querySelector(`#section5 .${btn_num} .title_container`).innerText)
+        $(this).find('.content_container').text(document.querySelector(`#section5 .${btn_num} .content_container`).innerText)
         // console.log(document.querySelector(`#section5 .${btn_num} .type`).innerText)
     })
 
     //意見送出按鈕
-    $('#suggest_submit').click(function(){
-        alert('感謝您提供的寶貴意見\n'  + '我們將會盡快回復')
+    $('#suggest_submit').click(function () {
+        alert('感謝您提供的寶貴意見\n' + '我們將會盡快回復')
     })
 })()
