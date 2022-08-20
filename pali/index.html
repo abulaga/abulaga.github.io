@@ -1,657 +1,823 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="css/index.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
 
-<body>
+  <body>
     <section id="section1">
-        <nav>
-            <div class="container">
-                <div class="row nav_list justify-content-between align-items-center">
-                    <div class="col-2">
-                        <div class="icon"></div>
-                    </div>
-                    <div class="col-9 col-lg-8">
-                        <ul class="">
-                            <li>
-                                <a href="#section2">
-                                    <div class="item">關於培力</div>
-                                    <div class="sub_item">About</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section3">
-                                    <div class="item">歷史沿革</div>
-                                    <div class="sub_item">History</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section4">
-                                    <div class="item">生活花絮</div>
-                                    <div class="sub_item">Activities</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section5">
-                                    <div class="item">最新消息</div>
-                                    <div class="sub_item">News</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section6">
-                                    <div class="item">商品介紹</div>
-                                    <div class="sub_item">Product</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#section7">
-                                    <div class="item">聯絡我們</div>
-                                    <div class="sub_item">Contact</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row nav_ham justify-content-between ">
-                    <div class="col-2 offset-1">
-                        <div class="icon"></div>
-                    </div>
-                    <div class="col-1">
-                        <div class="ham_bar">
-                            <div class="bar_line line1"></div>
-                            <div class="bar_line line2"></div>
-                            <div class="bar_line line3"></div>
-                        </div>
-                    </div>
-                </div>
+      <nav>
+        <div class="container">
+          <div class="row nav_list justify-content-between align-items-center">
+            <div class="col-2">
+              <div class="icon"></div>
             </div>
-        </nav>
-        <div class="banner">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url(./img/banner1.jpg);"></div>
-                    <div class="swiper-slide" style="background-image: url(./img/banner2.png);"></div>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
+            <div class="col-9 col-lg-8">
+              <ul class="">
+                <li>
+                  <a href="#section2">
+                    <div class="item">關於培力</div>
+                    <div class="sub_item">About</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#section3">
+                    <div class="item">歷史沿革</div>
+                    <div class="sub_item">History</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#section4">
+                    <div class="item">生活花絮</div>
+                    <div class="sub_item">Activities</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#section5">
+                    <div class="item">最新消息</div>
+                    <div class="sub_item">News</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#section6">
+                    <div class="item">商品介紹</div>
+                    <div class="sub_item">Product</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#section7">
+                    <div class="item">聯絡我們</div>
+                    <div class="sub_item">Contact</div>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </div>
+          <div class="row nav_ham justify-content-between">
+            <div class="col-2 offset-1">
+              <div class="icon"></div>
+            </div>
+            <div class="col-1">
+              <div class="ham_bar">
+                <div class="bar_line line1"></div>
+                <div class="bar_line line2"></div>
+                <div class="bar_line line3"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </nav>
+      <div class="banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="background-image: url(./img/banner1.jpg)"
+            ></div>
+            <div
+              class="swiper-slide"
+              style="background-image: url(./img/banner2.png)"
+            ></div>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
     </section>
     <section id="section2">
-        <div class="gap">
-            <div class="gap1">
-                <div class="square"></div>
-                <div class="triangle"></div>
-            </div>
-            <div class="gap2 lax" data-lax-translate-y_xsmall=" 0 -15, 200 -15,800 15"
-                data-lax-translate-y_medium="0 -30, 200 -30,800 30" data-lax-translate-y_xlarge="0 -30, 200 -30,800 30">
-                <div class="triangle"></div>
-                <div class="square"></div>
-            </div>
+      <div class="gap">
+        <div class="gap1">
+          <div class="square"></div>
+          <div class="triangle"></div>
         </div>
-        <div class="triangle_border lax" data-lax-translate-y_xsmall=" 0 20, 200 20,800 -5"
-            data-lax-translate-y_medium="0 40, 200 40,800 -10" data-lax-translate-y_xlarge="0 40, 200 40,800 -10">
-            <div class="border_line"></div>
+        <div
+          class="gap2 lax"
+          data-lax-translate-y_xsmall=" 0 -15, 200 -15,800 15"
+          data-lax-translate-y_medium="0 -30, 200 -30,800 30"
+          data-lax-translate-y_xlarge="0 -30, 200 -30,800 30"
+        >
+          <div class="triangle"></div>
+          <div class="square"></div>
         </div>
-        <div class="container">
-            <div class="row  justify-content-center">
-                <div class="col-10 offset-md-2">
-                    <div class="topic">關於培力<span>&nbsp/About us</span></div>
-                </div>
-            </div>
+      </div>
+      <div
+        class="triangle_border lax"
+        data-lax-translate-y_xsmall=" 0 20, 200 20,800 -5"
+        data-lax-translate-y_medium="0 40, 200 40,800 -10"
+        data-lax-translate-y_xlarge="0 40, 200 40,800 -10"
+      >
+        <div class="border_line"></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 offset-md-2">
+            <div class="topic">關於培力<span>&nbsp/About us</span></div>
+          </div>
         </div>
+      </div>
 
-        <div class="container about_block">
-            <div class="row about1 justify-content-center">
-                <div class="col-11 flex_block">
-                    <div class="pic">
-                        <img src="./img/about1_pic1-09.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="title">宗旨</div>
-                        <hr>
-                        <div class="text">
-                            貓頭鷹象徵的是守護，期望經由商店的經營、機會及場提供更多工作域，培訓他們學習在職場上的人際應對、商店行銷、販售等技能，培力其自立穩定生活，脫離流浪生活，讓培力商店成為他們的避風港。
-                        </div>
-
-                    </div>
-                </div>
-
+      <div class="container about_block">
+        <div class="row about1 justify-content-center">
+          <div class="col-11 flex_block">
+            <div class="pic">
+              <img src="./img/about1_pic1-09.jpg" alt="" />
             </div>
-            <div class="row about2 justify-content-center">
-                <div class="col-11  flex_block ">
-                    <div class="pic">
-                        <img src="./img/about2_pic1-09.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="title">介紹</div>
-                        <hr>
-                        <div class="text">
-                            貓頭鷹象徵的是守護，期望經由商店的經營、機會及場提供更多工作域，培訓他們學習在職場上的人際應對、商店行銷、販售等技能，培力其自立穩定生活，脫離流浪生活，讓培力商店成為他們的避風港。
-                        </div>
-                    </div>
-                </div>
+            <div class="content">
+              <div class="title">宗旨</div>
+              <hr />
+              <div class="text">
+                貓頭鷹象徵的是守護，期望經由商店的經營、機會及場提供更多工作域，培訓他們學習在職場上的人際應對、商店行銷、販售等技能，培力其自立穩定生活，脫離流浪生活，讓培力商店成為他們的避風港。
+              </div>
             </div>
-
+          </div>
         </div>
+        <div class="row about2 justify-content-center">
+          <div class="col-11 flex_block">
+            <div class="pic">
+              <img src="./img/about2_pic1-09.jpg" alt="" />
+            </div>
+            <div class="content">
+              <div class="title">介紹</div>
+              <hr />
+              <div class="text">
+                貓頭鷹象徵的是守護，期望經由商店的經營、機會及場提供更多工作域，培訓他們學習在職場上的人際應對、商店行銷、販售等技能，培力其自立穩定生活，脫離流浪生活，讓培力商店成為他們的避風港。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="section3">
-        <div class="gap">
-            <div class="gap1">
-                <div class="square"></div>
-                <div class="triangle"></div>
-            </div>
-            <!-- +1100/+1450 -->
-            <div class="gap2 lax" data-lax-translate-y_xsmall=" 0 -15, 1650 -15,2250 15"
-                data-lax-translate-y_medium="0 -30, 1300 -30,1900 30"
-                data-lax-translate-y_xlarge="0 -30, 1300 -30,1900 30">
-                <div class="triangle"></div>
-                <div class="square"></div>
-            </div>
+      <div class="gap">
+        <div class="gap1">
+          <div class="square"></div>
+          <div class="triangle"></div>
         </div>
-        <div class="triangle_border lax" data-lax-translate-y_xsmall=" 0 20, 1650 20,2250 -10"
-            data-lax-translate-y_medium="0 40, 1300 40,1900 -10" data-lax-translate-y_xlarge="0 40, 1300 40,1900 -10">
-            <div class="border_line"></div>
+        <!-- +1100/+1450 -->
+        <div
+          class="gap2 lax"
+          data-lax-translate-y_xsmall=" 0 -15, 1650 -15,2250 15"
+          data-lax-translate-y_medium="0 -30, 1300 -30,1900 30"
+          data-lax-translate-y_xlarge="0 -30, 1300 -30,1900 30"
+        >
+          <div class="triangle"></div>
+          <div class="square"></div>
         </div>
-        <div class="container">
-            <div class="row  justify-content-center">
-                <div class="col-10 offset-md-2">
-                    <div class="topic">歷史沿革<span>&nbsp/History</span></div>
-                </div>
-            </div>
+      </div>
+      <div
+        class="triangle_border lax"
+        data-lax-translate-y_xsmall=" 0 20, 1650 20,2250 -10"
+        data-lax-translate-y_medium="0 40, 1300 40,1900 -10"
+        data-lax-translate-y_xlarge="0 40, 1300 40,1900 -10"
+      >
+        <div class="border_line"></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 offset-md-2">
+            <div class="topic">歷史沿革<span>&nbsp/History</span></div>
+          </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="time_area">
-                        <div class="block1">
-                            <div class="hidden lax" data-lax-translate-x_xsmall="0 -570,1600 -570,1900 0"
-                                data-lax-translate-x_medium="0 -570,1249 -570,1548 0"
-                                data-lax-translate-x_xlarge="0 -570,1637 -570,1887 0">
-                                <div class="title_area">
-                                    <div class="title">成立</div>
-                                    <div class="date">2010年5月</div>
-                                </div>
-                                <div class="h_line"></div>
-                                <div class="content_area">
-                                    <div class="pic">
-                                        <img src="./img/time_pic1.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        &nbsp&nbsp&nbsp&nbsp台中市府社會局從2010年5月與龍眼林社福基金會合作，在火車站出口左方設立培力商店，訓練街友自力更生的工作能力、並藉由場域學習與人互動，結束遠離人群、流離失所的生活。
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block2">
-                            <div class="hidden lax" data-lax-translate-x_xsmall="0 -570,2347 -570,2730 0"
-                                data-lax-translate-x_medium="0 570,1400 570,1800 0"
-                                data-lax-translate-x_xlarge="0 570,1809 570,2059 0">
-                                <div class="title_area">
-                                    <div class="title">轉型</div>
-                                    <div class="date">2010年5月</div>
-                                </div>
-                                <div class="h_line"></div>
-                                <div class="content_area">
-                                    <div class="pic">
-                                        <img src="./img/time_pic2.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        &nbsp&nbsp&nbsp&nbsp培力商店成立之初，主要以販售伴手禮、特色小吃及農特產為主，但業績有限，2013/1月店面經過重新定位、更名「Station
-                                        1 創驛台中」」，以環保、文創為主，販賣商品包括公平貿易咖啡、天然材質T恤、文創特色用品、雜誌及台灣果農水果冰棒等等。</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block3">
-                            <div class="hidden lax" data-lax-translate-x_xsmall="0 -570,2830 -570,3200 0"
-                                data-lax-translate-x_medium="0 -570,1800 -570,2100 0"
-                                data-lax-translate-x_xlarge="0 -570,2201 -570,2501 0">
-                                <div class="title_area">
-                                    <div class="title">轉型</div>
-                                    <div class="date">2010年5月</div>
-                                </div>
-                                <div class="h_line"></div>
-                                <div class="content_area">
-                                    <div class="pic">
-                                        <img src="./img/time_pic2.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        &nbsp&nbsp&nbsp&nbsp培力商店成立之初，主要以販售伴手禮、特色小吃及農特產為主，但業績有限，2013/1月店面經過重新定位、更名「Station
-                                        1 創驛台中」」，以環保、文創為主，販賣商品包括公平貿易咖啡、天然材質T恤、文創特色用品、雜誌及台灣果農水果冰棒等等。</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block4">
-                            <div class="hidden lax" data-lax-translate-x_xsmall="0 -570,3461 -570,3913 0"
-                                data-lax-translate-x_medium="0 570,1907 570,2160 0"
-                                data-lax-translate-x_xlarge="0 570,2370 570,2670 0">
-                                <div class="title_area">
-                                    <div class="title">轉型</div>
-                                    <div class="date">2010年5月</div>
-                                </div>
-                                <div class="h_line"></div>
-                                <div class="content_area">
-                                    <div class="pic">
-                                        <img src="./img/time_pic2.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        &nbsp&nbsp&nbsp&nbsp培力商店成立之初，主要以販售伴手禮、特色小吃及農特產為主，但業績有限，2013/1月店面經過重新定位、更名「Station
-                                        1 創驛台中」」，以環保、文創為主，販賣商品包括公平貿易咖啡、天然材質T恤、文創特色用品、雜誌及台灣果農水果冰棒等等。</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line lax" data-lax-translate-y_xsmall="0 0,1760 -5,4008 2350"
-                            data-lax-translate-y_medium="0 0,1168 -5,2314 1230"
-                            data-lax-translate-y_xlarge="0 0,1500 -5,2680 1230"></div>
-                        <div class="ball lax" data-lax-translate-y_xsmall="0 0,1760 -5,4008 2350"
-                            data-lax-translate-y_medium="0 0,1168 -5,2314 1230"
-                            data-lax-translate-y_xlarge="0 0,1500 -35 , 2680 1230"></div>
-
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="time_area">
+              <div class="block1">
+                <div
+                  class="hidden lax"
+                  data-lax-translate-x_xsmall="0 -570,1600 -570,1900 0"
+                  data-lax-translate-x_medium="0 -570,1249 -570,1548 0"
+                  data-lax-translate-x_xlarge="0 -570,1637 -570,1887 0"
+                >
+                  <div class="title_area">
+                    <div class="title">成立</div>
+                    <div class="date">2010年5月</div>
+                  </div>
+                  <div class="h_line"></div>
+                  <div class="content_area">
+                    <div class="pic">
+                      <img src="./img/time_pic1.jpg" alt="" />
                     </div>
+                    <div class="text">
+                      &nbsp&nbsp&nbsp&nbsp台中市府社會局從2010年5月與龍眼林社福基金會合作，在火車站出口左方設立培力商店，訓練街友自力更生的工作能力、並藉由場域學習與人互動，結束遠離人群、流離失所的生活。
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="block2">
+                <div
+                  class="hidden lax"
+                  data-lax-translate-x_xsmall="0 -570,2347 -570,2730 0"
+                  data-lax-translate-x_medium="0 570,1400 570,1800 0"
+                  data-lax-translate-x_xlarge="0 570,1809 570,2059 0"
+                >
+                  <div class="title_area">
+                    <div class="title">轉型</div>
+                    <div class="date">2010年5月</div>
+                  </div>
+                  <div class="h_line"></div>
+                  <div class="content_area">
+                    <div class="pic">
+                      <img src="./img/time_pic2.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                      &nbsp&nbsp&nbsp&nbsp培力商店成立之初，主要以販售伴手禮、特色小吃及農特產為主，但業績有限，2013/1月店面經過重新定位、更名「Station
+                      1
+                      創驛台中」」，以環保、文創為主，販賣商品包括公平貿易咖啡、天然材質T恤、文創特色用品、雜誌及台灣果農水果冰棒等等。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block3">
+                <div
+                  class="hidden lax"
+                  data-lax-translate-x_xsmall="0 -570,2830 -570,3200 0"
+                  data-lax-translate-x_medium="0 -570,1800 -570,2100 0"
+                  data-lax-translate-x_xlarge="0 -570,2201 -570,2501 0"
+                >
+                  <div class="title_area">
+                    <div class="title">轉型</div>
+                    <div class="date">2010年5月</div>
+                  </div>
+                  <div class="h_line"></div>
+                  <div class="content_area">
+                    <div class="pic">
+                      <img src="./img/time_pic2.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                      &nbsp&nbsp&nbsp&nbsp培力商店成立之初，主要以販售伴手禮、特色小吃及農特產為主，但業績有限，2013/1月店面經過重新定位、更名「Station
+                      1
+                      創驛台中」」，以環保、文創為主，販賣商品包括公平貿易咖啡、天然材質T恤、文創特色用品、雜誌及台灣果農水果冰棒等等。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block4">
+                <div
+                  class="hidden lax"
+                  data-lax-translate-x_xsmall="0 -570,3461 -570,3913 0"
+                  data-lax-translate-x_medium="0 570,1907 570,2160 0"
+                  data-lax-translate-x_xlarge="0 570,2370 570,2670 0"
+                >
+                  <div class="title_area">
+                    <div class="title">轉型</div>
+                    <div class="date">2010年5月</div>
+                  </div>
+                  <div class="h_line"></div>
+                  <div class="content_area">
+                    <div class="pic">
+                      <img src="./img/time_pic2.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                      &nbsp&nbsp&nbsp&nbsp培力商店成立之初，主要以販售伴手禮、特色小吃及農特產為主，但業績有限，2013/1月店面經過重新定位、更名「Station
+                      1
+                      創驛台中」」，以環保、文創為主，販賣商品包括公平貿易咖啡、天然材質T恤、文創特色用品、雜誌及台灣果農水果冰棒等等。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="line lax"
+                data-lax-translate-y_xsmall="0 0,1760 -5,4008 2350"
+                data-lax-translate-y_medium="0 0,1168 -5,2314 1230"
+                data-lax-translate-y_xlarge="0 0,1500 -5,2680 1230"
+              ></div>
+              <div
+                class="ball lax"
+                data-lax-translate-y_xsmall="0 0,1760 -5,4008 2350"
+                data-lax-translate-y_medium="0 0,1168 -5,2314 1230"
+                data-lax-translate-y_xlarge="0 0,1500 -35 , 2680 1230"
+              ></div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="section4">
-        <div class="gap">
-            <div class="gap1">
-                <div class="square"></div>
-                <div class="triangle"></div>
-            </div>
-            <!-- +1100/+1450 -->
-            <div class="gap2 lax" data-lax-translate-y_xsmall=" 0 -15, 2800 -15,3050 15"
-                data-lax-translate-y_medium="0 -30, 2750 -30,3000 30"
-                data-lax-translate-y_xlarge="0 -30, 2750 -30,3000 30">
-                <div class="triangle"></div>
-                <div class="square"></div>
-            </div>
+      <div class="gap">
+        <div class="gap1">
+          <div class="square"></div>
+          <div class="triangle"></div>
         </div>
-        <div class="triangle_border lax" data-lax-translate-y_xsmall=" 0 20, 2800 20,3050 -10"
-            data-lax-translate-y_medium="0 40, 2750 40,3000 -10" data-lax-translate-y_xlarge="0 40, 2750 40,3000 -10">
-            <div class="border_line"></div>
+        <!-- +1100/+1450 -->
+        <div
+          class="gap2 lax"
+          data-lax-translate-y_xsmall=" 0 -15, 2800 -15,3050 15"
+          data-lax-translate-y_medium="0 -30, 2750 -30,3000 30"
+          data-lax-translate-y_xlarge="0 -30, 2750 -30,3000 30"
+        >
+          <div class="triangle"></div>
+          <div class="square"></div>
         </div>
-        <div class="container">
-            <div class="row  justify-content-center">
-                <div class="col-10 offset-md-2">
-                    <div class="topic">活動花絮<span>&nbsp/Activities</span></div>
-                </div>
-            </div>
+      </div>
+      <div
+        class="triangle_border lax"
+        data-lax-translate-y_xsmall=" 0 20, 2800 20,3050 -10"
+        data-lax-translate-y_medium="0 40, 2750 40,3000 -10"
+        data-lax-translate-y_xlarge="0 40, 2750 40,3000 -10"
+      >
+        <div class="border_line"></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 offset-md-2">
+            <div class="topic">活動花絮<span>&nbsp/Activities</span></div>
+          </div>
         </div>
+      </div>
 
-        <div class="photo_list container">
-            <div class="row">
-                <div class="col">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <div class="pic" style="background-image: url(./img/act-pic1.jpg)"></div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">培力商店記者會</h5>
-                                        <p class="card-text">Nov. 15, 2018</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <div class="pic" style="background-image: url(./img/act-pic2.jpg)"></div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">禾六藝文化館市集</h5>
-                                        <p class="card-text">Oct. 1, 2020</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <div class="pic" style="background-image: url(./img/act-pic3.jpg)"></div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">咖啡沖煮教學</h5>
-                                        <p class="card-text">Jan. 25, 2019</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-
+      <div class="photo_list container">
+        <div class="row">
+          <div class="col">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div
+                      class="pic"
+                      style="background-image: url(./img/act-pic1.jpg)"
+                    ></div>
+                    <div class="card-body">
+                      <h5 class="card-title">培力商店記者會</h5>
+                      <p class="card-text">Nov. 15, 2018</p>
                     </div>
+                  </div>
                 </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div
+                      class="pic"
+                      style="background-image: url(./img/act-pic2.jpg)"
+                    ></div>
+                    <div class="card-body">
+                      <h5 class="card-title">禾六藝文化館市集</h5>
+                      <p class="card-text">Oct. 1, 2020</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div
+                      class="pic"
+                      style="background-image: url(./img/act-pic3.jpg)"
+                    ></div>
+                    <div class="card-body">
+                      <h5 class="card-title">咖啡沖煮教學</h5>
+                      <p class="card-text">Jan. 25, 2019</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="section5">
-        <div class="gap">
-            <div class="gap1">
-                <div class="square"></div>
-                <div class="triangle"></div>
-            </div>
-            <div class="gap2 lax" data-lax-translate-y_xsmall=" 0 -15, 3400 -15,3650 15"
-                data-lax-translate-y_medium="0 -30, 3700 -30,3950 30"
-                data-lax-translate-y_xlarge="0 -30, 3700 -30,3950 30">
-                <div class="triangle"></div>
-                <div class="square"></div>
-            </div>
+      <div class="gap">
+        <div class="gap1">
+          <div class="square"></div>
+          <div class="triangle"></div>
         </div>
-        <div class="triangle_border lax" data-lax-translate-y_xsmall=" 0 20, 3400 20,3650 -10"
-            data-lax-translate-y_medium="0 40, 3700 40,3950 -10" data-lax-translate-y_xlarge="0 40, 3700 40,3950 -10">
-            <div class="border_line"></div>
+        <div
+          class="gap2 lax"
+          data-lax-translate-y_xsmall=" 0 -15, 3400 -15,3650 15"
+          data-lax-translate-y_medium="0 -30, 3700 -30,3950 30"
+          data-lax-translate-y_xlarge="0 -30, 3700 -30,3950 30"
+        >
+          <div class="triangle"></div>
+          <div class="square"></div>
         </div>
-        <div class="container">
-            <div class="row  justify-content-center">
-                <div class="col-10 offset-md-2">
-                    <div class="topic">最新消息<span>&nbsp/News</span></div>
-                </div>
-            </div>
+      </div>
+      <div
+        class="triangle_border lax"
+        data-lax-translate-y_xsmall=" 0 20, 3400 20,3650 -10"
+        data-lax-translate-y_medium="0 40, 3700 40,3950 -10"
+        data-lax-translate-y_xlarge="0 40, 3700 40,3950 -10"
+      >
+        <div class="border_line"></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 offset-md-2">
+            <div class="topic">最新消息<span>&nbsp/News</span></div>
+          </div>
         </div>
+      </div>
 
-        <div class="container news_area">
-            <div class="row">
-                <div class="col">
-                    <div class="page page1 now">
-                        <ul>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_1">
-                                    <div class="news_type_container">
-                                        <div class="type">活動公告</div>
-                                        <div class="date">2020.02.29</div>
-                                    </div>
-                                    <div class="title_container">【感謝。給予。關愛 展】</div>
-                                    <div class="content_container">人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
-                                        <br>因為，您的愛，是我們在人生的旅途不再一樣！<br><br>展出日期:2019/11/28~2019/12/25(週日休店)<br>展出地點:台中培力商店(台中市民族路187號)
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_1">Read more</div>
-                                </div>
-                            </li>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_2">
-                                    <div class="news_type_container">
-                                        <div class="type">最新消息</div>
-                                        <div class="date">2020.02.25</div>
-                                    </div>
-                                    <div class="title_container">【休店公告】</div>
-                                    <div class="content_container">2/28-2/29(本周五、六)<br>和平紀念日連假<br>培力商店店休二日
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_2">Read more</div>
-                                </div>
-                            </li>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_3">
-                                    <div class="news_type_container">
-                                        <div class="type">活動公告</div>
-                                        <div class="date">2020.02.29</div>
-                                    </div>
-                                    <div class="title_container">【市集我來了】</div>
-                                    <div class="content_container">
-                                        我們來到市集賣東西囉~<br>快跟著我們藝起來~動作快!<br>日期:7/20~7/21<br>時間:10:00~17:30<br>地點:道禾六藝中心
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_3">Read more</div>
-                                </div>
-                            </li>
-                        </ul>
+      <div class="container news_area">
+        <div class="row">
+          <div class="col">
+            <div class="page page1 now">
+              <ul>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_1">
+                    <div class="news_type_container">
+                      <div class="type">活動公告</div>
+                      <div class="date">2020.02.29</div>
                     </div>
-                    <div class="page page2 ">
-                        <ul>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_4">
-                                    <div class="news_type_container">
-                                        <div class="type">活動公告</div>
-                                        <div class="date">2020.02.29</div>
-                                    </div>
-                                    <div class="title_container">【感謝。給予。關愛 展2】</div>
-                                    <div class="content_container">人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
-                                        <br>因為，您的愛，是我們在人生的旅途不再一樣！<br><br>展出日期:2019/11/28~2019/12/25(週日休店)<br>展出地點:台中培力商店(台中市民族路187號)
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_4">Read more</div>
-                                </div>
-                            </li>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_5">
-                                    <div class="news_type_container">
-                                        <div class="type">最新消息</div>
-                                        <div class="date">2020.02.25</div>
-                                    </div>
-                                    <div class="title_container">【休店公告2】</div>
-                                    <div class="content_container">2/28-2/29(本周五、六)<br>和平紀念日連假<br>培力商店店休二日
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_5">Read more</div>
-                                </div>
-                            </li>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_6">
-                                    <div class="news_type_container">
-                                        <div class="type">活動公告</div>
-                                        <div class="date">2020.02.29</div>
-                                    </div>
-                                    <div class="title_container">【市集我來了2】</div>
-                                    <div class="content_container">
-                                        我們來到市集賣東西囉~<br>快跟著我們藝起來~動作快!<br>日期:7/20~7/21<br>時間:10:00~17:30<br>地點:道禾六藝中心
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_6">Read more</div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="title_container">【感謝。給予。關愛 展】</div>
+                    <div class="content_container">
+                      人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
+                      <br />因為，您的愛，是我們在人生的旅途不再一樣！<br /><br />展出日期:2019/11/28~2019/12/25(週日休店)<br />展出地點:台中培力商店(台中市民族路187號)
                     </div>
-                    <div class="page page3 ">
-                        <ul>
-                            <li>
-                                <hr>
-                                <div class="pic_block"></div>
-                                <div class="content_block news_7">
-                                    <div class="news_type_container">
-                                        <div class="type">活動公告</div>
-                                        <div class="date">2020.02.29</div>
-                                    </div>
-                                    <div class="title_container">【感謝。給予。關愛 展3】</div>
-                                    <div class="content_container">人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
-                                        <br>因為，您的愛，是我們在人生的旅途不再一樣！<br><br>展出日期:2019/11/28~2019/12/25(週日休店)<br>展出地點:台中培力商店(台中市民族路187號)
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_7">Read more</div>
-                                </div>
-                            </li>
-                            <li>
-                                <hr>
-                                <div class="pic_block news_8"></div>
-                                <div class="content_block">
-                                    <div class="news_type_container">
-                                        <div class="type">最新消息</div>
-                                        <div class="date">2020.02.25</div>
-                                    </div>
-                                    <div class="title_container">【休店公告3】</div>
-                                    <div class="content_container">2/28-2/29(本周五、六)<br>和平紀念日連假<br>培力商店店休二日
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_8">Read more</div>
-                                </div>
-                            </li>
-                            <li>
-                                <hr>
-                                <div class="pic_block news_9"></div>
-                                <div class="content_block">
-                                    <div class="news_type_container">
-                                        <div class="type">活動公告</div>
-                                        <div class="date">2020.02.29</div>
-                                    </div>
-                                    <div class="title_container">【市集我來了3】</div>
-                                    <div class="content_container">
-                                        我們來到市集賣東西囉~<br>快跟著我們藝起來~動作快!<br>日期:7/20~7/21<br>時間:10:00~17:30<br>地點:道禾六藝中心
-                                    </div>
-                                    <div class="btn_container" type="button" data-toggle="modal"
-                                        data-target="#news_modal" data-btn_num="news_9">Read more</div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_1"
+                    >
+                      Read more
                     </div>
-                </div>
+                  </div>
+                </li>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_2">
+                    <div class="news_type_container">
+                      <div class="type">最新消息</div>
+                      <div class="date">2020.02.25</div>
+                    </div>
+                    <div class="title_container">【休店公告】</div>
+                    <div class="content_container">
+                      2/28-2/29(本周五、六)<br />和平紀念日連假<br />培力商店店休二日
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_2"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_3">
+                    <div class="news_type_container">
+                      <div class="type">活動公告</div>
+                      <div class="date">2020.02.29</div>
+                    </div>
+                    <div class="title_container">【市集我來了】</div>
+                    <div class="content_container">
+                      我們來到市集賣東西囉~<br />快跟著我們藝起來~動作快!<br />日期:7/20~7/21<br />時間:10:00~17:30<br />地點:道禾六藝中心
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_3"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-        </div>
-        <div class="container pagination_area">
-            <div class="row">
-                <div class="col">
-                    <ul>
-                        <li data-btn="pre">&lt;</li>
-                        <li class="now" data-btn="1">1</li>
-                        <li data-btn="2">2</li>
-                        <li data-btn="3">3</li>
-                        <li data-btn="next">&gt;</li>
-                    </ul>
-                </div>
+            <div class="page page2">
+              <ul>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_4">
+                    <div class="news_type_container">
+                      <div class="type">活動公告</div>
+                      <div class="date">2020.02.29</div>
+                    </div>
+                    <div class="title_container">【感謝。給予。關愛 展2】</div>
+                    <div class="content_container">
+                      人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
+                      <br />因為，您的愛，是我們在人生的旅途不再一樣！<br /><br />展出日期:2019/11/28~2019/12/25(週日休店)<br />展出地點:台中培力商店(台中市民族路187號)
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_4"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_5">
+                    <div class="news_type_container">
+                      <div class="type">最新消息</div>
+                      <div class="date">2020.02.25</div>
+                    </div>
+                    <div class="title_container">【休店公告2】</div>
+                    <div class="content_container">
+                      2/28-2/29(本周五、六)<br />和平紀念日連假<br />培力商店店休二日
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_5"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_6">
+                    <div class="news_type_container">
+                      <div class="type">活動公告</div>
+                      <div class="date">2020.02.29</div>
+                    </div>
+                    <div class="title_container">【市集我來了2】</div>
+                    <div class="content_container">
+                      我們來到市集賣東西囉~<br />快跟著我們藝起來~動作快!<br />日期:7/20~7/21<br />時間:10:00~17:30<br />地點:道禾六藝中心
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_6"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
+            <div class="page page3">
+              <ul>
+                <li>
+                  <hr />
+                  <div class="pic_block"></div>
+                  <div class="content_block news_7">
+                    <div class="news_type_container">
+                      <div class="type">活動公告</div>
+                      <div class="date">2020.02.29</div>
+                    </div>
+                    <div class="title_container">【感謝。給予。關愛 展3】</div>
+                    <div class="content_container">
+                      人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
+                      <br />因為，您的愛，是我們在人生的旅途不再一樣！<br /><br />展出日期:2019/11/28~2019/12/25(週日休店)<br />展出地點:台中培力商店(台中市民族路187號)
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_7"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <hr />
+                  <div class="pic_block news_8"></div>
+                  <div class="content_block">
+                    <div class="news_type_container">
+                      <div class="type">最新消息</div>
+                      <div class="date">2020.02.25</div>
+                    </div>
+                    <div class="title_container">【休店公告3】</div>
+                    <div class="content_container">
+                      2/28-2/29(本周五、六)<br />和平紀念日連假<br />培力商店店休二日
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_8"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <hr />
+                  <div class="pic_block news_9"></div>
+                  <div class="content_block">
+                    <div class="news_type_container">
+                      <div class="type">活動公告</div>
+                      <div class="date">2020.02.29</div>
+                    </div>
+                    <div class="title_container">【市集我來了3】</div>
+                    <div class="content_container">
+                      我們來到市集賣東西囉~<br />快跟著我們藝起來~動作快!<br />日期:7/20~7/21<br />時間:10:00~17:30<br />地點:道禾六藝中心
+                    </div>
+                    <div
+                      class="btn_container"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#news_modal"
+                      data-btn_num="news_9"
+                    >
+                      Read more
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="container pagination_area">
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li data-btn="pre">&lt;</li>
+              <li class="now" data-btn="1">1</li>
+              <li data-btn="2">2</li>
+              <li data-btn="3">3</li>
+              <li data-btn="next">&gt;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        <div class="modal fade " id="news_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col ">
-                                    <div class="content_block">
-                                        <div class="pic_block">
-                                            <img src="../img/news2.jpg" alt="">
-                                        </div>
-                                        <div class="news_type_container">
-                                            <div class="type">活動公告</div>
-                                            <div class="date">2020.02.29</div>
-                                        </div>
-                                        <div class="title_container">【感謝。給予。關愛 展】</div>
-                                        <div class="content_container">人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
-                                            <br>因為，您的愛，是我們在人生的旅途不再一樣！<br><br>展出日期:2019/11/28~2019/12/25(週日休店)<br>展出地點:台中培力商店(台中市民族路187號)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div
+        class="modal fade"
+        id="news_modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                    <div class="content_block">
+                      <div class="pic_block">
+                        <img src="../img/news2.jpg" alt="" />
+                      </div>
+                      <div class="news_type_container">
+                        <div class="type">活動公告</div>
+                        <div class="date">2020.02.29</div>
+                      </div>
+                      <div class="title_container">【感謝。給予。關愛 展】</div>
+                      <div class="content_container">
+                        人生的旅程，或許走著顛顛簸簸、甚至生命的破裂…
+                        <br />因為，您的愛，是我們在人生的旅途不再一樣！<br /><br />展出日期:2019/11/28~2019/12/25(週日休店)<br />展出地點:台中培力商店(台中市民族路187號)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- <button type="button" data-toggle="modal" data-target="#news_modal">Launch modal</button> -->
-
+      </div>
+      <!-- <button type="button" data-toggle="modal" data-target="#news_modal">Launch modal</button> -->
     </section>
     <section id="section6"></section>
     <section id="section7">
-        <div class="gap">
-            <div class="gap1">
-                <div class="square"></div>
-                <div class="triangle"></div>
+      <div class="gap">
+        <div class="gap1">
+          <div class="square"></div>
+          <div class="triangle"></div>
+        </div>
+        <div
+          class="gap2 lax"
+          data-lax-translate-y_xsmall=" 0 -15, 3400 -15,3650 15"
+          data-lax-translate-y_medium="0 -30, 3700 -30,3950 30"
+          data-lax-translate-y_xlarge="0 -30, 3700 -30,3950 30"
+        >
+          <div class="triangle"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+      <div
+        class="triangle_border lax"
+        data-lax-translate-y_xsmall=" 0 20, 3400 20,3650 -10"
+        data-lax-translate-y_medium="0 40, 3700 40,3950 -10"
+        data-lax-translate-y_xlarge="0 40, 3700 40,3950 -10"
+      >
+        <div class="border_line"></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 offset-md-2">
+            <div class="topic">聯絡我們<span>&nbsp/Contact</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="container content_area">
+        <div class="row">
+          <div class="col-12 col-lg-4 info_block">
+            <div class="title">培力商點</div>
+            <div class="open_time">
+              營業時間&nbsp:&nbsp&nbsp周一至周六 9 : 00 ~ 18 : 00
             </div>
-            <div class="gap2 lax" data-lax-translate-y_xsmall=" 0 -15, 3400 -15,3650 15"
-                data-lax-translate-y_medium="0 -30, 3700 -30,3950 30"
-                data-lax-translate-y_xlarge="0 -30, 3700 -30,3950 30">
-                <div class="triangle"></div>
-                <div class="square"></div>
+            <div class="phone">連絡電話&nbsp:&nbsp&nbsp(04)2222-1833</div>
+            <div class="address">
+              地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp址 :
+              &nbsp台中市中區民族路187號
             </div>
-        </div>
-        <div class="triangle_border lax" data-lax-translate-y_xsmall=" 0 20, 3400 20,3650 -10"
-            data-lax-translate-y_medium="0 40, 3700 40,3950 -10" data-lax-translate-y_xlarge="0 40, 3700 40,3950 -10">
-            <div class="border_line"></div>
-        </div>
-        <div class="container">
-            <div class="row  justify-content-center">
-                <div class="col-10 offset-md-2">
-                    <div class="topic">聯絡我們<span>&nbsp/Contact</span></div>
-                </div>
+            <div class="icons">
+              <div class="icon_fb"></div>
+              <div class="icon_ig"></div>
+              <div class="icon_line"></div>
             </div>
-        </div>
-        <div class="container content_area">
-            <div class="row ">
-                <div class="col-12 col-lg-4 info_block">
-                    <div class="title">培力商點</div>
-                    <div class="open_time">營業時間&nbsp:&nbsp&nbsp周一至周六 9 : 00 ~ 18 : 00</div>
-                    <div class="phone">連絡電話&nbsp:&nbsp&nbsp(04)2222-1833</div>
-                    <div class="address">地&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp址 : &nbsp台中市中區民族路187號</div>
-                    <div class="icons">
-                        <div class="icon_fb"></div>
-                        <div class="icon_ig"></div>
-                        <div class="icon_line"></div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-8 form_block">
-                    <div class="title">填寫意見表單</div>
-                    <div class="form_area">
-                        <div class="name">
-                            <div class="title">姓名:</div>
-                            <input type="text" id="name">
-                        </div>
-                        <div class="tel">
-                            <div class="title">連絡電話:</div>
-                            <input type="text" id="tel">
-                        </div>
-                        <div class="phone">
-                            <div class="title">行動電話:</div>
-                            <input type="text" id="phone">
-                        </div>
-                        <div class="email">
-                            <div class="title">電子信箱:</div>
-                            <input type="text" id="mail">
-                        </div>
-                        <div class="suggest">
-                            <div class="title">建議內容:</div>
-                            <textarea name="" id="suggest" cols="" rows=""></textarea>
-                        </div>
-                        <div class="btn_area" id="suggest_submit">
-                            <button>確認送出</button>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-12 col-lg-8 form_block">
+            <div class="title">填寫意見表單</div>
+            <div class="form_area">
+              <div class="name">
+                <div class="title">姓名:</div>
+                <input type="text" id="name" />
+              </div>
+              <div class="tel">
+                <div class="title">連絡電話:</div>
+                <input type="text" id="tel" />
+              </div>
+              <div class="phone">
+                <div class="title">行動電話:</div>
+                <input type="text" id="phone" />
+              </div>
+              <div class="email">
+                <div class="title">電子信箱:</div>
+                <input type="text" id="mail" />
+              </div>
+              <div class="suggest">
+                <div class="title">建議內容:</div>
+                <textarea name="" id="suggest" cols="" rows=""></textarea>
+              </div>
+              <div class="btn_area" id="suggest_submit">
+                <button>確認送出</button>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.8607915183716!2d120.67473141498878!3d24.141526484398025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0d5ce33429%3A0xd1ca4b78bbc51e6b!2z6Ie65Lit5Z-55Yqb5ZWG5bqX!5e0!3m2!1szh-TW!2stw!4v1589919931618!5m2!1szh-TW!2stw"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-        </div>
-
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.8607915183716!2d120.67473141498878!3d24.141526484398025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0d5ce33429%3A0xd1ca4b78bbc51e6b!2z6Ie65Lit5Z-55Yqb5ZWG5bqX!5e0!3m2!1szh-TW!2stw!4v1589919931618!5m2!1szh-TW!2stw"
+          width="600"
+          height="450"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
     </section>
 
     <footer>2020 copyright © ChengYu All Rights Reserved.</footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -659,90 +825,87 @@
     <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
     <script src="./js/index.js"></script>
 
-
     <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script>
-        var swiper = new Swiper('#section1 .swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '#section1 .swiper-button-next',
-                prevEl: '#section1 .swiper-button-prev',
-
-            },
-            pagination: {
-                el: '#section1 .swiper-pagination',
-            },
-        });
-        var swiper_section4 = new Swiper('#section4 .swiper-container', {
+      var swiper = new Swiper("#section1 .swiper-container", {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: "#section1 .swiper-button-next",
+          prevEl: "#section1 .swiper-button-prev",
+        },
+        pagination: {
+          el: "#section1 .swiper-pagination",
+        },
+      });
+      var swiper_section4 = new Swiper("#section4 .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        loop: true,
+        // loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: "#section4 .swiper-button-next",
+          prevEl: "#section4 .swiper-button-prev",
+        },
+        pagination: {
+          el: "#section4 .swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
             slidesPerView: 1,
-            spaceBetween: 20,
-            slidesPerGroup: 1,
-            loop: true,
-            // loopFillGroupWithBlank: true,
-            navigation: {
-                nextEl: '#section4 .swiper-button-next',
-                prevEl: '#section4 .swiper-button-prev',
-            },
-            pagination: {
-                el: '#section4 .swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                576: {
-                    slidesPerView: 1,
-                    spaceBetween: 35,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 35,
-                },
-                992: {
-                    slidesPerView: 3,
-                    spaceBetween: 45,
-                },
-            }
+            spaceBetween: 35,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 35,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 45,
+          },
+        },
+      });
 
+      // console.log(document.querySelector('#section2').offsetTop)
+      // window.addEventListener('scroll', () => { console.log(window.scrollY) });
+
+      window.onload = function () {
+        lax.init();
+
+        // Add a driver that we use to control our animations
+        lax.addDriver("scrollY", function () {
+          return window.scrollY;
         });
 
-        // console.log(document.querySelector('#section2').offsetTop)
-        // window.addEventListener('scroll', () => { console.log(window.scrollY) });
-
-
-
-
-        window.onload = function () {
-            lax.init()
-
-            // Add a driver that we use to control our animations
-            lax.addDriver('scrollY', function () {
-                return window.scrollY
-            })
-
-            // Add animation bindings to elements
-            lax.addElements('.selector', {
-                scrollY: {
-                    translateX: [
-                        ["elInY", "elCenterY", "elOutY"],
-                        [0, 'screenWidth/2', 'screenWidth'],
-                    ]
-                }
-            })
-        }
-
+        // Add animation bindings to elements
+        lax.addElements(".selector", {
+          scrollY: {
+            translateX: [
+              ["elInY", "elCenterY", "elOutY"],
+              [0, "screenWidth/2", "screenWidth"],
+            ],
+          },
+        });
+      };
     </script>
-</body>
-
+  </body>
 </html>
