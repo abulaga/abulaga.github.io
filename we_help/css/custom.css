@@ -1,3 +1,16 @@
 .accordion-body {
   text-indent: 2em;
 }
+/* .accordion {
+  --accordion-bg: ##86b7fe;
+  --accordion-active-bg: #0c63e4;
+  --accordion-active-bg: ##86b7fe;
+} */
+
+body {
+  background-color: #cccccc;
+}
+
+.accordion-item {
+  margin: 10px;
+}
